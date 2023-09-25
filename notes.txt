@@ -1,0 +1,4 @@
+Scaffold-DbContext "Server=MSI-GF63\SQLEXPRESS;Database=test_db; Trusted_Connection=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Repos/Models -context LearndataContext -f -contextDir Repos -DataAnnotations
+
+
+

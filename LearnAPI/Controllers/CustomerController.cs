@@ -1,10 +1,14 @@
 ﻿using LearnAPI.Modal;
 using LearnAPI.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace LearnAPI.Controllers
 {
+    [Authorize]
+    [EnableRateLimiting("fixedwindow")]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
