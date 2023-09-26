@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Reflection.Metadata;
 using System.Security.Claims;
 using System.Text;
 
@@ -41,10 +42,10 @@ namespace LearnAPI.Controllers
                 {
                     Subject=new ClaimsIdentity(new Claim[]
                     {
-                        new Claim(ClaimTypes.Name,user.Name),
-                        new Claim(ClaimTypes.Name,user.Role)
+                        new Claim(ClaimTypes.Name,user.Code),
+                        new Claim(ClaimTypes.Role,user.Role)
                     }),
-                    Expires = DateTime.UtcNow.AddSeconds(30),
+                    Expires = DateTime.UtcNow.AddSeconds(50),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenkey),SecurityAlgorithms.HmacSha256)
                 };
                 var token = tokenhandler.CreateToken(tokendesc);
@@ -63,7 +64,7 @@ namespace LearnAPI.Controllers
 
         [HttpPost("GenerateRefreshToken")]
 
-        public async Task<IActionResult> GenerateToken([FromBody] TokenResponse token)
+        public async Task<IActionResult> GenerateRefreshToken([FromBody] TokenResponse token)
         {
             var _refreshtoken = await this.context.TblRefreshtokens.FirstOrDefaultAsync(item => item.Refreshtoken == token.RefreshToken);
             if (_refreshtoken != null)
@@ -90,7 +91,7 @@ namespace LearnAPI.Controllers
                     {
                         var _newtoken = new JwtSecurityToken(
                             claims: pricipal.Claims.ToArray(),
-                            expires: DateTime.Now.AddSeconds(30),
+                            expires: DateTime.Now.AddSeconds(50),
                             signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this.jwtSettings.securitykey)),
                             SecurityAlgorithms.HmacSha256)
                             );
@@ -107,24 +108,11 @@ namespace LearnAPI.Controllers
                 else
                 {
                     return Unauthorized();
-                }
-               /* var tokendesc = new SecurityTokenDescriptor
-                {
-                    Subject = new ClaimsIdentity(new Claim[]
-                    {
-                        new Claim(ClaimTypes.Name,user.Name),
-                        new Claim(ClaimTypes.Name,user.Role)
-                    }),
-                    Expires = DateTime.UtcNow.AddSeconds(30),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenkey), SecurityAlgorithms.HmacSha256)
-                };
-                var token = tokenhandler.CreateToken(tokendesc);
-                var finaltoken = tokenhandler.WriteToken(token);
-                return Ok(new TokenResponse() { Token = finaltoken, RefreshToken = await this.refresh.GenerateToken(userCred.username) });
-               */
+                }   
             }
             else
             {
+                
                 return Unauthorized();
             }
 
