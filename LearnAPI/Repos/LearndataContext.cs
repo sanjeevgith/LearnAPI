@@ -20,7 +20,7 @@ public partial class LearndataContext : DbContext
 
     public virtual DbSet<TblUser> TblUsers { get; set; }
 
-    public virtual DbSet<TnlRefreshtoken> TnlRefreshtokens { get; set; }
+    public virtual DbSet<TblRefreshtoken> TblRefreshtokens { get; set; }
 
    
     protected override void OnModelCreating(ModelBuilder modelBuilder)

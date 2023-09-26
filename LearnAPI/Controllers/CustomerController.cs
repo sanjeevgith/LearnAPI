@@ -19,6 +19,7 @@ namespace LearnAPI.Controllers
             this.service = service;
         }
 
+        [AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<IActionResult> Get()
         {

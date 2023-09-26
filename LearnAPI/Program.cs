@@ -1,12 +1,16 @@
 using AutoMapper;
 using LearnAPI.Container;
 using LearnAPI.Helper;
+using LearnAPI.Modal;
 using LearnAPI.Repos;
 using LearnAPI.Service;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +23,7 @@ builder.Services.AddSwaggerGen();
 
 //dependency injection 
 builder.Services.AddTransient<ICustomerService , CustomerService>();
+builder.Services.AddTransient<IRefreshHandler , RefreshHandler>();
 //end DE
 
 
@@ -29,9 +34,29 @@ o.UseSqlServer(builder.Configuration.GetConnectionString("apicon")));
 
 
 //basic Auth
-builder.Services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+//builder.Services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 //end basic auth
 
+//jwt token
+var _authkey = builder.Configuration.GetValue<string>("JwtSettings:securitykey");
+builder.Services.AddAuthentication(item =>
+{
+    item.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    item.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(item =>
+{
+    item.RequireHttpsMetadata = true;
+    item.SaveToken = true;
+    item.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authkey)),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ClockSkew = TimeSpan.Zero,
+    };
+});
+//end jwt token
 
 
 //handler service
@@ -70,6 +95,12 @@ var _logger = new LoggerConfiguration()
     .CreateLogger();
 builder.Logging.AddSerilog(_logger);
 //end log 
+
+
+//jwt code
+var _jwtsettings = builder.Configuration.GetSection("JwtSettings");
+builder.Services.Configure<JwtSettings>(_jwtsettings);
+//end jwt
 
 var app = builder.Build();
 

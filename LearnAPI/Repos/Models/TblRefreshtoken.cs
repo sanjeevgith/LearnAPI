@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LearnAPI.Repos.Models;
 
-[Table("tnl_refreshtoken")]
-public partial class TnlRefreshtoken
+[Table("tbl_refreshtoken")]
+public partial class TblRefreshtoken
 {
     [Key]
     [Column("userid")]
