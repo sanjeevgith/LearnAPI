@@ -113,6 +113,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+//for access img files
+app.UseStaticFiles();
+
 app.UseCors("corspolicy");
 
 app.UseHttpsRedirection();
