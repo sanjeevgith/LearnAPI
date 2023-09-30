@@ -1,6 +1,8 @@
 ﻿using LearnAPI.Helper;
+using LearnAPI.Repos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace LearnAPI.Controllers
 {
@@ -9,10 +11,12 @@ namespace LearnAPI.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IWebHostEnvironment environment;
+        private readonly LearndataContext context;
 
-        public ProductController(IWebHostEnvironment environment)
+        public ProductController(IWebHostEnvironment environment,LearndataContext context)
         {
             this.environment = environment;
+            this.context = context;
         }
 
 
@@ -88,6 +92,39 @@ namespace LearnAPI.Controllers
 
 
 
+        [HttpPut("DbMultiUploadImage")]
+        public async Task<IActionResult> DbMultiUploadImage(IFormFileCollection filecollection, string productcode)
+        {
+            APIResponse response = new APIResponse();
+            int passcount = 0; int errorcount = 0;
+            try
+            {
+                foreach (var file in filecollection)
+                {
+
+                    using(MemoryStream stream = new MemoryStream())
+                    {
+                        await file.CopyToAsync(stream);
+                        this.context.TblProductimages.Add(new Repos.Models.TblProductimage() { 
+                            Productcode = productcode,
+                            Productimage = stream.ToArray()
+                        });
+                        await this.context.SaveChangesAsync();
+                        passcount++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                errorcount++;
+                response.ErrorMessage = ex.Message;
+            }
+            response.ResponseCode = 200;
+            response.Result = passcount + " Files Uploaded " + errorcount + " Files Failed";
+            return Ok(response);
+        }
+
+
 
         [HttpGet("GetImage")]
         public async Task<IActionResult> GetImage(string productcode)
@@ -146,9 +183,50 @@ namespace LearnAPI.Controllers
             return Ok(Imageurl);
         }
 
+        [HttpGet("DbGetMultiImage")]
+        public async Task<IActionResult> DbGetMultiImage(string productcode)
+        { 
+            List<string> Imageurl = new List<string>();
+            //string hosturl = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
+            try
+            {
+                var _productimage = this.context.TblProductimages.Where(item=>item.Productcode== productcode).ToList();
+                if(_productimage.Count>0 && _productimage != null)
+                {
+                    _productimage.ForEach(item =>
+                    {
+                        Imageurl.Add(Convert.ToBase64String(item.Productimage));
+                    });
+                }
+                else 
+                {
+                    return NotFound();
+                }
+              /*  string Filepath = GetFilePath(productcode);
+                if (System.IO.Directory.Exists(Filepath))
+                {
+                    DirectoryInfo DirectoryInfo = new DirectoryInfo(Filepath);
+                    FileInfo[] fileInfos = DirectoryInfo.GetFiles();
+                    foreach (FileInfo fileInfo in fileInfos)
+                    {
+                        string filename = fileInfo.Name;
+                        string imagepath = Filepath + "\\" + filename;
+                        if (System.IO.File.Exists(imagepath))
+                        {
+                            string _Imageurl = hosturl + "/Upload/Product/" + productcode + "/" + filename;
+                            Imageurl.Add(_Imageurl);
+                        }
+                    }
+                }*/
+            }
+            catch (Exception ex)
+            {
 
+            }
+            return Ok(Imageurl);
+        }
 
-        [HttpGet("Download")]
+        [HttpGet("DownloadImg")]
         public async Task<IActionResult> Download(string productcode)
         {
             try
@@ -178,6 +256,27 @@ namespace LearnAPI.Controllers
         }
 
 
+
+        [HttpGet("DbDownloadImg")]
+        public async Task<IActionResult> DbDownload(string productcode)
+        {
+            try
+            {
+                var _productimage =await this.context.TblProductimages.FirstOrDefaultAsync(item => item.Productcode == productcode);
+                if (_productimage != null)
+                {
+                    return File(_productimage.Productimage, "image/png", productcode + ".pmg");
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
+        }
 
 
         [HttpDelete("Remove")]

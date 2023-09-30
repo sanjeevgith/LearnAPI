@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text;
 
@@ -19,7 +20,33 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(c =>
+{
+c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme.",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "bearer"
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement{
+         {
+             new OpenApiSecurityScheme
+             {
+                 Reference  =  new OpenApiReference
+                 {
+                     Type = ReferenceType.SecurityScheme,
+                     Id = "Bearer"
+                 }
+             },
+             new string[]{}
+
+         },
+     });
+});
 
 //dependency injection 
 builder.Services.AddTransient<ICustomerService , CustomerService>();
@@ -79,7 +106,7 @@ builder.Services.AddRateLimiter(p => p.AddFixedWindowLimiter(policyName: "fixedw
 {
     options.Window =  TimeSpan.FromSeconds(10);
     options.PermitLimit = 1;
-    options.QueueLimit = 1;
+    options.QueueLimit = 0;
     options.QueueProcessingOrder = System.Threading.RateLimiting.QueueProcessingOrder.OldestFirst;
 }).RejectionStatusCode=401);
 //end rate limiter
@@ -103,6 +130,18 @@ builder.Services.Configure<JwtSettings>(_jwtsettings);
 //end jwt
 
 var app = builder.Build();
+
+
+//minimal api
+app.MapGet("minapiget", () => "hi sanjeev");
+
+app.MapGet("getCustomer",async (LearndataContext data) =>
+{
+    return await data.TblCustomers.ToListAsync();
+});
+//end minimal api
+
+
 
 app.UseRateLimiter();
 
