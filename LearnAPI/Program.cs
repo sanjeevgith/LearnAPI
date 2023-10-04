@@ -48,6 +48,14 @@ c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
      });
 });
 
+//email
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
+builder.Services.AddTransient<IEmailService, EmailService>(); 
+//end email
+
+
+
 //dependency injection 
 builder.Services.AddTransient<ICustomerService , CustomerService>();
 builder.Services.AddTransient<IRefreshHandler , RefreshHandler>();

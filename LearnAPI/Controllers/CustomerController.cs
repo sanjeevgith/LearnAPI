@@ -1,4 +1,6 @@
 ﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.EMMA;
+using DocumentFormat.OpenXml.Wordprocessing;
 using LearnAPI.Modal;
 using LearnAPI.Service;
 using Microsoft.AspNetCore.Authorization;
@@ -6,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Data;
+
+
 
 namespace LearnAPI.Controllers
 {
@@ -36,7 +40,7 @@ namespace LearnAPI.Controllers
             return Ok(data);
         }
 
-
+        [AllowAnonymous]
         [HttpGet("GetByCode")]
         public async Task<IActionResult> Getbycode(string code) 
         {
@@ -131,6 +135,25 @@ namespace LearnAPI.Controllers
         private string GetFilePath()
         {
             return this.environment.WebRootPath + "\\Export";
+        }
+
+
+
+
+
+        [AllowAnonymous]
+        [HttpGet("generatepdf")]
+
+        public async Task<IActionResult> generatepdf(string code)
+        {
+            var data = await this.service.GetByCode(code);
+            if (data == null)
+            {
+                return NotFound();
+            }
+
+
+            return Ok("");
         }
 
 
