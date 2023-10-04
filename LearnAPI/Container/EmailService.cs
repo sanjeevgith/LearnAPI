@@ -26,6 +26,24 @@ namespace LearnAPI.Container
             builder.HtmlBody = mailRequest.Body;
             email.Body = builder.ToMessageBody();
 
+            //attechment file from project directory
+            byte[] fileBytes;
+            if (System.IO.File.Exists("AttachmentsFiles/dummy.pdf"))
+            {
+                FileStream file = new FileStream("AttachmentsFiles/dummy.pdf",FileMode.Open, FileAccess.Read);
+                using (var sr = new MemoryStream())
+                {
+                    file.CopyTo(sr);
+                    fileBytes=sr.ToArray();
+                }
+                builder.Attachments.Add("AttachmentsFiles.pdf", fileBytes, ContentType.Parse("application/octet-stream"));
+            }
+            builder.HtmlBody = mailRequest.Body;
+            email.Body = builder.ToMessageBody();
+            //end
+
+
+
             using var smtp = new SmtpClient();
 
             smtp.Connect(emailSettings.Host, emailSettings.Port, SecureSocketOptions.StartTls);
