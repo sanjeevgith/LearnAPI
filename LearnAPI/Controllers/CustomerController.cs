@@ -43,8 +43,8 @@ namespace LearnAPI.Controllers
 
 
         [AllowAnonymous]
-        [HttpGet("GetAllWithPagination")]
-        public async Task<IActionResult> GetPagi(int pageNumber = 1, int pageSize = 2)
+        [HttpPost("GetAllWithPagination")]
+        public async Task<IActionResult> GetPagi(PageinationReq pageinationReq)
         {
             var data = await this.service.GetAllWithPagination();
             if (data == null)
@@ -52,8 +52,8 @@ namespace LearnAPI.Controllers
                 return NotFound();
             }
             var paginatedItems = data
-                               .Skip((pageNumber - 1) * pageSize)
-                               .Take(pageSize)
+                               .Skip((pageinationReq.pageNumber - 1) * pageinationReq.pageSize)
+                               .Take(pageinationReq.pageSize)
                                .ToList();
             return Ok(paginatedItems);
         }
