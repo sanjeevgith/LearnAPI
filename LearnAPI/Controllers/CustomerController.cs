@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using DocumentFormat.OpenXml.EMMA;
+using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using LearnAPI.Modal;
 using LearnAPI.Service;
@@ -39,6 +40,24 @@ namespace LearnAPI.Controllers
             }
             return Ok(data);
         }
+
+
+        [AllowAnonymous]
+        [HttpGet("GetAllWithPagination")]
+        public async Task<IActionResult> GetPagi(int pageNumber = 1, int pageSize = 2)
+        {
+            var data = await this.service.GetAllWithPagination();
+            if (data == null)
+            {
+                return NotFound();
+            }
+            var paginatedItems = data
+                               .Skip((pageNumber - 1) * pageSize)
+                               .Take(pageSize)
+                               .ToList();
+            return Ok(paginatedItems);
+        }
+
 
         [AllowAnonymous]
         [HttpGet("GetByCode")]

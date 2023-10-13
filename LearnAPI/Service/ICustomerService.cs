@@ -8,7 +8,9 @@ namespace LearnAPI.Service
     {
        Task< List<Customermodal>> GetAll();
 
-       Task< Customermodal> GetByCode(string code);
+        Task<List<Customermodal>> GetAllWithPagination();
+
+        Task< Customermodal> GetByCode(string code);
 
        Task<APIResponse> Remove(string code);
 

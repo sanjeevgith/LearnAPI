@@ -32,6 +32,23 @@ namespace LearnAPI.Container
             return _response;
         }
 
+
+
+        public async Task<List<Customermodal>> GetAllWithPagination()
+        {
+            List<Customermodal> _response = new List<Customermodal>();
+            var _data = await this.context.TblCustomers.ToListAsync();
+            if (_data != null)
+            {
+                _response = this.mapper.Map<List<TblCustomer>, List<Customermodal>>(_data);
+            }
+            return _response;
+        }
+
+
+
+
+
         public async Task<APIResponse> Create(Customermodal data)
         {
             APIResponse response = new APIResponse();
