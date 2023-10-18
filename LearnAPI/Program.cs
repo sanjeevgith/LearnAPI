@@ -103,7 +103,7 @@ builder.Services.AddSingleton(mapper);
   
 builder.Services.AddCors(p => p.AddPolicy("corspolicy",build =>
 {
-    build.WithOrigins("*").AllowAnyOrigin().AllowAnyMethod();
+    build.WithOrigins("http://localhost:4200").AllowAnyOrigin().AllowAnyMethod();
 }));
 //end cors
 

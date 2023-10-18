@@ -6,40 +6,35 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LearnAPI.Repos.Models;
 
+[Keyless]
 [Table("tbl_user")]
 public partial class TblUser
 {
-    [Key]
     [Column("code")]
     [StringLength(50)]
-    [Unicode(false)]
-    public string Code { get; set; } = null!;
+    public string? Code { get; set; }
 
     [Column("name")]
-    [StringLength(250)]
-    [Unicode(false)]
-    public string Name { get; set; } = null!;
+    [StringLength(50)]
+    public string? Name { get; set; }
 
     [Column("email")]
-    [StringLength(100)]
-    [Unicode(false)]
+    [StringLength(50)]
     public string? Email { get; set; }
 
     [Column("phone")]
-    [StringLength(20)]
-    [Unicode(false)]
+    [StringLength(50)]
     public string? Phone { get; set; }
 
     [Column("password")]
     [StringLength(50)]
-    [Unicode(false)]
     public string? Password { get; set; }
 
     [Column("isactive")]
-    public bool? Isactive { get; set; }
+    [StringLength(50)]
+    public string? Isactive { get; set; }
 
     [Column("role")]
     [StringLength(50)]
-    [Unicode(false)]
     public string? Role { get; set; }
 }

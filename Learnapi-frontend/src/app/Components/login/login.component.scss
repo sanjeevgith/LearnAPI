@@ -1,0 +1,13 @@
+
+
+form {
+  text-align: start;
+  border: 1px solid grey;
+  padding: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the container height to fill the viewport height */
+}

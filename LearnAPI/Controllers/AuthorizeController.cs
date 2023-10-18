@@ -1,5 +1,9 @@
-﻿using LearnAPI.Modal;
+﻿using AutoMapper;
+using LearnAPI.Container;
+using LearnAPI.Helper;
+using LearnAPI.Modal;
 using LearnAPI.Repos;
+using LearnAPI.Repos.Models;
 using LearnAPI.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,12 +24,16 @@ namespace LearnAPI.Controllers
         private readonly LearndataContext context;
         private readonly IRefreshHandler refresh;
         private readonly JwtSettings jwtSettings;
+        private readonly IMapper mapper;
+        private readonly ILogger<CustomerService> logger;
 
-        public AuthorizeController(LearndataContext context , IOptions<JwtSettings> options, IRefreshHandler refresh)
+        public AuthorizeController(LearndataContext context , IOptions<JwtSettings> options, IRefreshHandler refresh, IMapper mapper, ILogger<CustomerService> logger)
         {
             this.context = context;
             this.refresh = refresh;
             this.jwtSettings = options.Value;
+            this.mapper = mapper;
+            this.logger = logger;
         }
 
         [HttpPost("GenerateToken")]
@@ -58,6 +66,32 @@ namespace LearnAPI.Controllers
             }
              
         }
+
+
+        [HttpPost("RegisterUser")]
+        public async Task<IActionResult> RegisterUser([FromBody] CreateUser createUser )
+        {
+            APIResponse response = new APIResponse();
+            try
+            {
+                this.logger.LogInformation("Create begin");
+                TblUser _customer = this.mapper.Map<CreateUser, TblUser>(createUser);
+                await this.context.TblUsers.AddAsync(_customer);
+                await this.context.SaveChangesAsync();
+                response.ResponseCode = 201;
+                response.Result = createUser.Code;
+            }
+            catch (Exception ex)
+            {
+                response.ResponseCode = 400;
+                response.ErrorMessage = ex.Message;
+                this.logger.LogError(ex.Message, ex);
+            }
+            return Ok(response);
+        }
+
+
+
 
 
 

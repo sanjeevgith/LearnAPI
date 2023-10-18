@@ -29,7 +29,7 @@ namespace LearnAPI.Controllers
             this.environment = environment;
         }
 
-       // [AllowAnonymous]
+        [AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<IActionResult> Get()
         {

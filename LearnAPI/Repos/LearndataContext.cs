@@ -29,6 +29,7 @@ public partial class LearndataContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
         OnModelCreatingPartial(modelBuilder);
     }
 
