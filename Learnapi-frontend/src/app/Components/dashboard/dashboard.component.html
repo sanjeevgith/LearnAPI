@@ -1,16 +1,255 @@
 
 <app-header></app-header>
 
+<div class="addbtn">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Add Customer
+    </button>
+</div>
 
-<p>dashboard works!</p>
-<p>dashboard works!</p>
-<p>dashboard works!</p>
-<p>dashboard works!</p>
-<p>dashboard works!</p>
-<p>dashboard works!</p>
-<p>dashboard works!</p>
-<p>dashboard works!</p>
-<p>dashboard works!</p>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Customer</h5>
+        <button type="button" class="close"data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="customercreate">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Code</label>
+            <input placeholder="Code e.g A001"
+              type="text"
+              formControlName="code"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input placeholder="Full Name"
+              type="text"
+              formControlName="name"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input placeholder="Email"
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              formControlName="email"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+            <label for="exampleInputPassword1" class="form-label">Phone</label>
+            <input placeholder="Phone No."
+              type="tel"
+              formControlName="phone"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">CreditLimit</label>
+            <input placeholder="creditlimit"
+              type="number"
+              formControlName="creditlimit"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3" hidden>
+            <label for="exampleInputPassword1" class="form-label">isactive</label>
+            <input 
+              type="text" 
+              formControlName="isActive"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">StatusName</label>
+            <input placeholder="statusname"
+              type="password"
+              formControlName="statusname"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">TaxCode</label>
+            <input placeholder="taxcode"
+              type="number"
+              formControlName="taxcode"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="submit()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Creditlimit</th>
+        <th scope="col">Statusname</th>
+        <th scope="col">Taxcode</th>
+        <th scope="col">isActive</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let data of getallres">
+      <tr>
+        <th scope="row">{{data.code}}</th>
+        <td>{{data.name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.phone}}</td>
+        <td>{{data.creditlimit}}</td>
+        <td>{{data.statusname}}</td>
+        <td>{{data.taxcode}}</td>
+        <td>{{data.isActive}}</td>
+        <td>
+            <button type="button" (click)="getcutbycode(data.code)"  data-bs-toggle="modal" data-bs-target="#exampleModal1" style="margin-right: 5px;" class="btn btn-success">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="delete(data.code)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Customer</h5>
+          <button type="button" class="close"data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="customercreate">
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Code</label>
+              <input  placeholder="Code e.g A001" [disabled]="isDisabled" 
+                type="text"
+                formControlName="code"
+                class="form-control"
+                id="exampleInputPassword1"
+                
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Name</label>
+              <input placeholder="Full Name"
+                type="text"
+                formControlName="name"
+                class="form-control"
+                id="exampleInputPassword1"
+               
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input placeholder="Email"
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                formControlName="email"
+               
+              />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+              <label for="exampleInputPassword1" class="form-label">Phone</label>
+              <input placeholder="Phone No."
+                type="tel"
+                formControlName="phone"
+                class="form-control"
+                id="exampleInputPassword1"
+                
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">CreditLimit</label>
+              <input placeholder="creditlimit"
+                type="number"
+                formControlName="creditlimit"
+                class="form-control"
+                id="exampleInputPassword1"
+               
+              />
+            </div>
+            <div class="mb-3" hidden>
+              <label for="exampleInputPassword1" class="form-label">isactive</label>
+              <input 
+                type="text" 
+                formControlName="isActive"
+                class="form-control"
+                id="exampleInputPassword1"
+               
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">StatusName</label>
+              <input placeholder="statusname"
+                type="password"
+                formControlName="statusname"
+                class="form-control"
+                id="exampleInputPassword1"
+              
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">TaxCode</label>
+              <input placeholder="taxcode"
+                type="number"
+                formControlName="taxcode"
+                class="form-control"
+                id="exampleInputPassword1"
+                
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="edit()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
 
 <app-footer></app-footer>

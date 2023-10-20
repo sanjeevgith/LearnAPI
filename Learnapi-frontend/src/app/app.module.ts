@@ -9,6 +9,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import {HttpClientModule} from "@angular/common/http"
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WildcardComponent } from './Components/wildcard/wildcard.component';
  
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import {HttpClientModule} from "@angular/common/http"
     RegisterComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    WildcardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

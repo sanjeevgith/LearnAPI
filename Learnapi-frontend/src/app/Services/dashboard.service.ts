@@ -1,9 +1,31 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DashboardService {
+  URL = 'https://localhost:7213/api/Customer/';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+  getall() {
+    return this.http.get(this.URL + 'GetAll');
+  }
+
+  delete(code: any) {
+    return this.http.delete(this.URL + 'Remove?code=' + code);
+  }
+
+  edit(data: any) {
+    return this.http.put(this.URL, +'Update?code=' + data.code, data);
+  }
+
+  addcustomer(data: any) {
+    return this.http.post(this.URL + 'Create', data);
+  }
+
+  getcustomerbycode(code:any){
+    return this.http.get(this.URL + 'GetByCode?code=' + code)
+  }
 }

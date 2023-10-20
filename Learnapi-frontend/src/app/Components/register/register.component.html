@@ -1,22 +1,82 @@
+
+<div class="container-flex">
 <div class="container">
-  <form>
+  <form [formGroup]="user" (ngSubmit)="submit()">
+    <div class="form-header" style="text-align: center;font-size: large;">
+      Register
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Code</label>
+      <input placeholder="Code e.g A001"
+        type="text"
+        formControlName="code"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Name</label>
+      <input placeholder="Full Name"
+        type="text"
+        formControlName="name"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
+    </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input
+      <input placeholder="Email"
         type="email"
         class="form-control"
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
+        formControlName="email"
       />
       <div id="emailHelp" class="form-text">
         We'll never share your email with anyone else.
       </div>
+      <label for="exampleInputPassword1" class="form-label">Phone</label>
+      <input placeholder="Phone No."
+        type="tel"
+        formControlName="phone"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" />
+      <input placeholder="password"
+        type="password"
+        formControlName="password"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
+    </div>
+    <div class="mb-3" hidden>
+      <label for="exampleInputPassword1" class="form-label">isactive</label>
+      <input 
+        type="text" 
+        formControlName="isactive"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Role</label>
+      <input placeholder="Role"
+        type="password"
+        formControlName="role"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
     </div>
 
+    <div class="mb-3" style="text-align: right">
+      <label class="form-check-label" for="exampleCheck1" routerLink="/login"
+        >Login?</label
+      >
+    </div>
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
+</div>
 </div>
