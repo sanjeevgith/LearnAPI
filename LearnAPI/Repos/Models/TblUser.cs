@@ -6,17 +6,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LearnAPI.Repos.Models;
 
-[Keyless]
 [Table("tbl_user")]
 public partial class TblUser
 {
+    [Key]
     [Column("code")]
     [StringLength(50)]
-    public string? Code { get; set; }
+    public string Code { get; set; } = null!;
 
     [Column("name")]
     [StringLength(50)]
-    public string? Name { get; set; }
+    public string Name { get; set; } = null!;
 
     [Column("email")]
     [StringLength(50)]

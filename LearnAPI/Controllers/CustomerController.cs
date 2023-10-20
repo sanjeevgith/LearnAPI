@@ -15,7 +15,8 @@ using System.Data;
 namespace LearnAPI.Controllers
 {
     [Authorize]
-    [EnableRateLimiting("fixedwindow")]
+    //to limiet request EnableRateLimiting
+    //[EnableRateLimiting("fixedwindow")]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -80,6 +81,8 @@ namespace LearnAPI.Controllers
             return Ok(data);
         }
 
+
+        [AllowAnonymous]
         [HttpPut("Update")]
         public async Task<IActionResult> Update(Customermodal _data, string code)
         {
@@ -88,6 +91,7 @@ namespace LearnAPI.Controllers
             return Ok(data);
         }
 
+        [AllowAnonymous]
         [HttpDelete("Remove")]
         public async Task<IActionResult> Remove( string code)
         {

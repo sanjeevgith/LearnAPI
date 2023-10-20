@@ -6,15 +6,16 @@ namespace LearnAPI.Modal
 {
     public class CreateUser
     {
+        [Key]
         [Column("code")]
         [StringLength(50)]
         [Unicode(false)]
-        public string Code { get; set; } 
+        public string Code { get; set; } = null!;
 
         [Column("name")]
         [StringLength(250)]
         [Unicode(false)]
-        public string Name { get; set; } 
+        public string Name { get; set; } = null!;
 
         [Column("email")]
         [StringLength(100)]

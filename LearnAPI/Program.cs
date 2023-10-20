@@ -101,10 +101,20 @@ builder.Services.AddSingleton(mapper);
 //end handler service
 
   
-builder.Services.AddCors(p => p.AddPolicy("corspolicy",build =>
+/*builder.Services.AddCors(p => p.AddPolicy("corspolicy",build =>
 {
     build.WithOrigins("http://localhost:4200").AllowAnyOrigin().AllowAnyMethod();
-}));
+}));*/
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("corspolicy", builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 //end cors
 
 

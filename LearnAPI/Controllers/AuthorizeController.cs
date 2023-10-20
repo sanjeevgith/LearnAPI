@@ -53,7 +53,7 @@ namespace LearnAPI.Controllers
                         new Claim(ClaimTypes.Name,user.Code),
                         new Claim(ClaimTypes.Role,user.Role)
                     }),
-                    Expires = DateTime.UtcNow.AddSeconds(50),
+                    Expires = DateTime.UtcNow.AddMinutes(100),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenkey),SecurityAlgorithms.HmacSha256)
                 };
                 var token = tokenhandler.CreateToken(tokendesc);
