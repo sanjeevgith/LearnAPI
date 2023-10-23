@@ -1,3 +1,15 @@
 .addbtn{
     margin: 10px;
 }
+
+
+.input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  h3 {
+    margin-left: 10; /* Remove default margin from h3 */
+    margin-right: 10px; /* Add some spacing between the label and input */
+  }
+  

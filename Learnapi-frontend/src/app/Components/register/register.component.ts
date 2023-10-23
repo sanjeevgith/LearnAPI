@@ -11,7 +11,11 @@ import { RegisterService } from 'src/app/Services/register.service';
 export class RegisterComponent implements OnInit {
   user!: FormGroup;
 
-  constructor(private fb: FormBuilder,private register:RegisterService,private router:Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private register: RegisterService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.user = this.fb.group({
@@ -25,20 +29,21 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-
-  userres:any
+  userres: any;
   submit() {
     console.log(this.user.value);
     if (this.user.valid) {
-      this.register.postuser(this.user.value).subscribe(res=>{
+      this.register.postuser(this.user.value).subscribe((res) => {
         this.userres = res;
-        console.log("userres",this.userres);
-        this.router.navigate(["login"])
-      })
-    } 
-    else {
-      alert("Please fill all fields")
+        console.log('userres', this.userres);
+        if (this.userres.responseCode === 400) {
+          alert('Please Select Unique ID');
+        } else {
+          this.router.navigate(['login']);
+        }
+      });
+    } else {
+      alert('Please fill all fields');
     }
-   
   }
 }

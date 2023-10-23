@@ -72,7 +72,7 @@ namespace LearnAPI.Controllers
             return Ok(data);
         }
 
-
+        [AllowAnonymous]
         [HttpPost("Create")]
         public async Task<IActionResult> Create(Customermodal _data)
         {

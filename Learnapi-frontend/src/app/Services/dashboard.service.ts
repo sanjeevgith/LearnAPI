@@ -17,8 +17,8 @@ export class DashboardService {
     return this.http.delete(this.URL + 'Remove?code=' + code);
   }
 
-  edit(data: any) {
-    return this.http.put(this.URL, +'Update?code=' + data.code, data);
+  edit(code:any,data: any) {
+    return this.http.put(this.URL +'Update?code=' + code , data);
   }
 
   addcustomer(data: any) {
