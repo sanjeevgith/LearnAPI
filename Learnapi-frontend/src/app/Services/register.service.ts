@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class RegisterService {
 
-
-  URL="https://localhost:7213/api/"
+  URL="https://learapi.bsite.net/api/"
+ // URL="https://localhost:7213/api/"
   constructor(private http:HttpClient) { }
 
 

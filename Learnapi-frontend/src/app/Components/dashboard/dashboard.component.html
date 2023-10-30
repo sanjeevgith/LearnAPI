@@ -1,11 +1,28 @@
 
 <app-header></app-header>
 
+
+
+<div style="background-color: antiquewhite;">
+  <input  class="form-control" id="imginput" type="number" placeholder="code">
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="uploadImage()">Upload Image</button>
+</div>
+
+<br>
+<div style="background-color: rgb(199, 153, 92);">
+<input class="form-control" id="multiimginput" type="number" placeholder="code" />
+<input type="file" (change)="onMultiFilesSelected($event)" multiple maxFileSize="30mb"/>
+<button (click)="MultiuploadImages()">Upload Images</button>
+</div>
+
+
 <div class="addbtn">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Add Customer
     </button>
 </div>
+
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -147,6 +164,7 @@
   <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
+        <form  [formGroup]="mail">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Send Mail</h5>
           <button type="button" class="close"data-bs-dismiss="modal" aria-label="Close">
@@ -156,21 +174,22 @@
         <div class="modal-body">
           <div class="input-group">
             <h5 style="width: 90px;">To;</h5>
-            <input class="form-control" readonly type="email" [value]="email"  >
+            <input class="form-control" formControlName="toEmail" readonly type="email" [value]="email"  >
           </div><br>
           <div class="input-group">
             <h5 style="width: 70px;">Subject;</h5>
-            <input class="form-control" id="subject"  type="email"  style="margin-left: 20px;" >
+            <input class="form-control" formControlName="subject" id="subject"  type="email"  style="margin-left: 20px;" >
           </div><br>
           <div class="input-group">
             <h5 style="width: 70px;">Body;</h5>
-            <textarea class="form-control" id="subject"  type="email"  style="margin-left: 20px;" ></textarea>
+            <textarea class="form-control" formControlName="body" id="body"  type="email"  style="margin-left: 20px;" ></textarea>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
           <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="sendmail()" >Send</button>
         </div>
+      </form>
       </div>
     </div>
   </div>
@@ -254,14 +273,26 @@
               />
             </div> -->
 
-          <div class="mb-3" >
+          <!-- <div class="mb-3" >
           <label for="exampleInputPassword1" class="form-label">isactive</label>
           <select   (change)="compareChange($event);" data-filter="make" class="form-select" >
-            <!-- <option value="" id="">Select Status</option> -->
-            <option  selected="isActive"  [value]="item" [id]="item" *ngFor="let item of compare_list">
-              {{ item }}</option>
+            <option    [value]="item" [id]="item" *ngFor="let item of compare_list">
+              {{  item }}</option>
           </select>
-          </div>
+          </div> -->
+
+            <div class="mb-3" >
+            <label for="exampleInputPassword1" class="form-label">isactive</label>
+            <select   (change)="compareChange($event);" data-filter="make" class="form-select" >
+              <option [selected]="isActive==null" value=''>Select</option>
+              <option [selected]="isActive===true" value=true>True</option>
+              <option [selected]="isActive===false" value=false>False</option>
+            </select>
+            </div>
+
+ 
+
+     
           
             <div class="mb-3">
               <label for="exampleInputPassword1" readonly class="form-label">StatusName</label>

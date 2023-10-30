@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DashboardService {
-  URL = 'https://localhost:7213/api/Customer/';
+  //URL = 'https://localhost:7213/api/Customer/';
+  URL="https://learapi.bsite.net/api/Customer/"
 
   constructor(private http: HttpClient) {}
 

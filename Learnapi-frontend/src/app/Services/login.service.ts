@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class LoginService {
 
 
-  URL="https://localhost:7213/api/"
+  //URL="https://localhost:7213/api/"
+  URL="https://learapi.bsite.net/api/"
   constructor(private http:HttpClient) { }
 
   loginuser(data:any){
