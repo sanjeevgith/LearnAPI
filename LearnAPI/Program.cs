@@ -157,6 +157,14 @@ app.MapGet("getCustomer",async (LearndataContext data) =>
 {
     return await data.TblCustomers.ToListAsync();
 });
+
+
+
+app.MapGet("getnameCustomer", async (string name) =>
+{
+    var data = new { name="welcome to " + name};
+    return Results.Json(data);
+});
 //end minimal api
 
 
