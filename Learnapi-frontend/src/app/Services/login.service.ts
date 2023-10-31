@@ -16,6 +16,11 @@ export class LoginService {
   }
 
 
+  getToken(){
+    var token= localStorage.getItem("token");
+    return token;
+  }
+
   isLoggedIn()
   {
       let token = localStorage.getItem("token");

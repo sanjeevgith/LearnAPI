@@ -6,6 +6,8 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
+import { NgxSpinner, NgxSpinnerService } from 'ngx-spinner';
+import { catchError, of } from 'rxjs';
 import { DashboardService } from 'src/app/Services/dashboard.service';
 import { MailService } from 'src/app/Services/mail.service';
 
@@ -20,14 +22,17 @@ export class DashboardComponent implements OnInit {
   mail!: FormGroup;
   isDisabled: boolean = true;
   statusactive!: boolean;
-
+  typeSelected: string;
   compare_list = [true, false];
   constructor(
     private dashboardservice: DashboardService,
     private fb: FormBuilder,
     private emailservice: MailService,
-    private http: HttpClient
-  ) {}
+    private http: HttpClient,
+    private spinnerService :NgxSpinnerService
+  ) {
+    this.typeSelected = 'ball-fussion';
+  }
 
   finres: any;
   ngOnInit(): void {
@@ -60,11 +65,19 @@ export class DashboardComponent implements OnInit {
     this.loadallcustomer();
   }
 
+  defaultcode!:string
   getallres: any;
   loadallcustomer() {
+    this.spinnerService.show();
     this.dashboardservice.getall().subscribe((res) => {
       this.getallres = res;
       console.log(this.getallres);
+      console.log(this.getallres.length + 1 );
+      this.defaultcode = (this.getallres.length + 1).toString();
+      // this.defaultcode = this.getallres.length + 1 
+      // setTimeout(() => {
+        this.spinnerService.hide();
+      //}, 3000);
     });
   }
 
@@ -78,24 +91,27 @@ export class DashboardComponent implements OnInit {
 
   submitres: any;
   submit() {
+    this.spinnerService.show();
     if (this.customercreate.valid) {
       this.dashboardservice
         .addcustomer(this.customercreate.value)
         .subscribe((res) => {
           this.submitres = res;
+          this.spinnerService.hide();
           window.location.reload();
           console.log('submitted', this.submitres);
           if (this.submitres.responseCode === 400) {
+            this.spinnerService.hide();
             alert('Please Select Unique ID');
           }
         });
     } else {
       alert('All Fields Are Required');
+      this.spinnerService.hide();
     }
   }
 
 
-  demo:any
 
   code: any;
   name: any;
@@ -115,15 +131,10 @@ export class DashboardComponent implements OnInit {
       this.phone = this.finalrescode.phone;
       this.creditlimit = this.finalrescode.creditlimit;
       this.isActive = this.finalrescode.isActive;
-     console.log(this.isActive);
-     this.demo = this.isActive
-
-      
-  
-
+     this.displayimage='';
+     this.statusactive =this.finalrescode.isActive;
       this.statusname = this.finalrescode.statusname;
       this.taxcode = this.finalrescode.taxcode;
-
       // console.log(this.finalrescode);
     });
   }
@@ -136,7 +147,7 @@ export class DashboardComponent implements OnInit {
       isActive: this.statusactive,
     });
 
-    // console.log("edit form values 2==",this.editcustomercreate.value);
+    console.log("edit form values ==",this.editcustomercreate.value);
     this.dashboardservice
       .edit(this.finalrescode.code, this.editcustomercreate.value)
       .subscribe((res) => {
@@ -183,7 +194,27 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-
+  finalimgres:any
+  displayimage:any
+  imgnull=false;
+  getimg(code:any){
+    this.displayimage='';
+    this.http.get(this.URL+"Product/GetImage?productcode="+code).pipe(
+      catchError(error => {
+        this.imgnull=false;
+        return of(null); 
+      })
+    ).subscribe(res => {
+      if (res) {
+        this.finalimgres = res;
+        // console.log(this.finalimgres.imageUrl);
+        this.displayimage = this.finalimgres.imageUrl;
+        this.imgnull=true;
+      } else {
+        
+      }
+    });
+  }
 
   //image upload (single file)
   selectedFile!: File;
@@ -191,17 +222,30 @@ export class DashboardComponent implements OnInit {
     this.selectedFile = event.target.files[0];
   }
 
+  load(){
+    window.location.reload();
+  }
+
+  URL="https://learapi.bsite.net/api/"
+  finalres:any
   uploadImage() {
+    this.spinnerService.show();
     if (this.selectedFile) {
       const formData = new FormData();
-      formData.append('formFile', this.selectedFile, this.selectedFile.name); 
+      formData.append('formFile', this.selectedFile); 
      // console.log(formData);
-      
       var imginput = (<HTMLInputElement>document.getElementById('imginput')).value;
       //console.log("https://localhost:7213/api/Product/UploadImage?productcode=" + imginput, formData);
-      this.http.put("https://localhost:7213/api/Product/UploadImage?productcode=" + imginput, formData).subscribe(res => {
-        var finalres = res;
-        console.log(finalres);
+      this.http.put(this.URL+"Product/UploadImage?productcode=" + imginput, formData).subscribe(res => {
+        this.finalres = res;
+        console.log(this.finalres);
+        if(this.finalres.responseCode ==200){
+          (<HTMLInputElement>document.getElementById('fileimginput')).value="";
+          this.spinnerService.hide();
+        }
+        else{
+          alert("Error")
+        }
       });
     }
   }
@@ -235,10 +279,10 @@ export class DashboardComponent implements OnInit {
     if (this.selectedFilesMulti && this.selectedFilesMulti.length > 0) {
       const formData = new FormData();
       for (let i = 0; i < this.selectedFilesMulti.length; i++) {
-        formData.append('filecollection', this.selectedFilesMulti[i], this.selectedFilesMulti[i].name);
+        formData.append('filecollection', this.selectedFilesMulti[i]);
       }
       var imginput = (<HTMLInputElement>document.getElementById('multiimginput')).value;
-      this.http.put(`https://localhost:7213/api/Product/MultiUploadImage?productcode=${imginput}`, formData).subscribe(
+      this.http.put(this.URL+`Product/MultiUploadImage?productcode=${imginput}`, formData).subscribe(
         (response) => {
           console.log('Images uploaded successfully', response);
         },
@@ -249,6 +293,10 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+
+  addimage(){
+    
+  }
 
 
 

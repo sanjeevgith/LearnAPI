@@ -25,7 +25,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Set the container height to fill the viewport height */
+    height: 720px; /* Set the container height to fill the viewport height */
     width: 100%;
   }
   form {
@@ -37,9 +37,9 @@ form {
     width: 100%;
   }
   .container-flex{
-   
+    
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 10px;
   }
 }

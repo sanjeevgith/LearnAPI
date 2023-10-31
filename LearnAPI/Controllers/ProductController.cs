@@ -148,7 +148,8 @@ namespace LearnAPI.Controllers
             {
 
             }
-            return Ok(Imageurl);
+            var response = new { ImageUrl =  Imageurl };
+            return Ok(response);
         }
 
 
@@ -180,7 +181,8 @@ namespace LearnAPI.Controllers
             {
 
             }
-            return Ok(Imageurl);
+            var response = new { ImageUrl = Imageurl };
+            return Ok(response);
         }
 
         [HttpGet("DbGetMultiImage")]

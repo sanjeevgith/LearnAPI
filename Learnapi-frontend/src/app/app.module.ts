@@ -8,10 +8,15 @@ import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
-import {HttpClientModule} from "@angular/common/http"
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WildcardComponent } from './Components/wildcard/wildcard.component';
- 
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgxSpinnerModule } from "ngx-spinner";
+import { InterInterceptor } from './Intercepter/inter.interceptor';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +32,17 @@ import { WildcardComponent } from './Components/wildcard/wildcard.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterInterceptor,
+    multi: true
+  }],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

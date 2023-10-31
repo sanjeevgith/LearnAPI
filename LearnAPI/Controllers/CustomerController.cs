@@ -30,7 +30,7 @@ namespace LearnAPI.Controllers
             this.environment = environment;
         }
 
-        [AllowAnonymous]
+       // [AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<IActionResult> Get()
         {
@@ -43,7 +43,7 @@ namespace LearnAPI.Controllers
         }
 
 
-        [AllowAnonymous]
+       // [AllowAnonymous]
         [HttpPost("GetAllWithPagination")]
         public async Task<IActionResult> GetPagi(PageinationReq pageinationReq)
         {
@@ -60,7 +60,7 @@ namespace LearnAPI.Controllers
         }
 
 
-        [AllowAnonymous]
+        // [AllowAnonymous]
         [HttpGet("GetByCode")]
         public async Task<IActionResult> Getbycode(string code) 
         {
@@ -72,7 +72,7 @@ namespace LearnAPI.Controllers
             return Ok(data);
         }
 
-        [AllowAnonymous]
+        // [AllowAnonymous]
         [HttpPost("Create")]
         public async Task<IActionResult> Create(Customermodal _data)
         {
@@ -82,7 +82,7 @@ namespace LearnAPI.Controllers
         }
 
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPut("Update")]
         public async Task<IActionResult> Update(Customermodal _data, string code)
         {
@@ -91,7 +91,7 @@ namespace LearnAPI.Controllers
             return Ok(data);
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpDelete("Remove")]
         public async Task<IActionResult> Remove( string code)
         {
@@ -101,7 +101,7 @@ namespace LearnAPI.Controllers
         }
 
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpGet("ExportExcel")]
         public async Task<IActionResult> ExportExcel()
         {
@@ -164,7 +164,7 @@ namespace LearnAPI.Controllers
 
 
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpGet("generatepdf")]
 
         public async Task<IActionResult> generatepdf(string code)

@@ -3,18 +3,13 @@
 
 
 
-<div style="background-color: antiquewhite;">
-  <input  class="form-control" id="imginput" type="number" placeholder="code">
-  <input type="file" (change)="onFileSelected($event)" />
-  <button (click)="uploadImage()">Upload Image</button>
-</div>
+<!-- <div style="background-color: antiquewhite;">
+  <input  class="form-control" id="multiimginput" type="number" placeholder="code">
+  <input type="file" (change)="onMultiFilesSelected($event)"  multiple/>
+  <button (click)="MultiuploadImages()">Upload Image</button>
+</div> -->
 
-<br>
-<div style="background-color: rgb(199, 153, 92);">
-<input class="form-control" id="multiimginput" type="number" placeholder="code" />
-<input type="file" (change)="onMultiFilesSelected($event)" multiple maxFileSize="30mb"/>
-<button (click)="MultiuploadImages()">Upload Images</button>
-</div>
+
 
 
 <div class="addbtn">
@@ -38,11 +33,12 @@
         <form [formGroup]="customercreate">
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Code</label>
-            <input placeholder="Code e.g A001"
+            <input placeholder="Code e.g 1"
               type="text"
               formControlName="code"
               class="form-control"
               id="exampleInputPassword1"
+              [(ngModel)]="defaultcode"
             />
           </div>
           <div class="mb-3">
@@ -122,7 +118,7 @@
 
 
 
-
+<div class="table-responsive">
 <table class="table table-striped">
     <thead>
       <tr>
@@ -140,7 +136,10 @@
     <tbody *ngFor="let data of getallres">
       <tr>
         <th scope="row">{{data.code}}</th>
-        <td>{{data.name}}</td>
+        <td>{{data.name}} <svg (click)="getcutbycode(data.code);getimg(data.code)"  data-bs-toggle="modal" data-bs-target="#exampleModal3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+          <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+        </svg></td>
         <td>{{data.email}} <svg (click)="getcutbycode(data.code)" data-bs-toggle="modal" data-bs-target="#exampleModal2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-arrow-up" viewBox="0 0 16 16">
           <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4.5a.5.5 0 0 1-1 0V5.383l-7 4.2-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-1.99V4Zm1 7.105 4.708-2.897L1 5.383v5.722ZM1 4v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1Z"/>
           <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.354-5.354 1.25 1.25a.5.5 0 0 1-.708.708L13 12.207V14a.5.5 0 0 1-1 0v-1.717l-.28.305a.5.5 0 0 1-.737-.676l1.149-1.25a.5.5 0 0 1 .722-.016Z"/>
@@ -157,6 +156,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 
 
 
@@ -195,6 +195,38 @@
   </div>
   <!-- end mail -->
 
+
+  <!-- add image model -->
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Customer Image</h5>
+          <button type="button" class="close"data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <img [src]='displayimage' *ngIf="imgnull" alt="" style="width:200px;height: 200px;">
+          </div>
+          <div style="background-color: rgb(251, 249, 247);">
+            <input  [value]="code" class="form-control" id="imginput" type="number" placeholder="code" />
+            <input  type="file" id="fileimginput" (change)="onFileSelected($event)"  maxFileSize="30mb"/><br>
+            <div class="mt-3">
+              <button class="btn btn-success" (click)="uploadImage()">Upload Images</button>
+            </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal" (click)="load()" >Close</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <!-- end image -->
 
 
   <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -324,10 +356,14 @@
     </div>
   </div>
 
+ 
 
 
 
 
+  <ngx-spinner bdColor="black" size="medium" [type]="typeSelected">
+    <p style="font-size: 20px; color: white">Loading...</p>
+  </ngx-spinner>
 
 
 <app-footer></app-footer>
