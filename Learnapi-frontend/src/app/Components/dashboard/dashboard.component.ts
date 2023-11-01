@@ -294,6 +294,25 @@ export class DashboardComponent implements OnInit {
   }
 
 
+
+
+
+  downloadExcel() {
+    const apiUrl = this.URL+"Customer/ExportExcel"; 
+    this.http.get(apiUrl, { responseType: 'arraybuffer' }).subscribe((response: ArrayBuffer) => {
+      const blob = new Blob([response], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = 'Customer.xlsx';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, error => {
+      console.error('Error downloading the file:', error);
+    });
+  }
+  
+
   addimage(){
     
   }

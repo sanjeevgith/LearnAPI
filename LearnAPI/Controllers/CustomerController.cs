@@ -101,7 +101,7 @@ namespace LearnAPI.Controllers
         }
 
 
-        //[AllowAnonymous]
+        [AllowAnonymous]
         [HttpGet("ExportExcel")]
         public async Task<IActionResult> ExportExcel()
         {
@@ -140,6 +140,7 @@ namespace LearnAPI.Controllers
                         }
                         wb.SaveAs(excelpath);
                         //end
+
                         return File(stream.ToArray(),"application/vnb.openxmlformats-officedocument.spreadsheetml.sheet","Customer.xlsx");
                     }
                 }
@@ -154,6 +155,8 @@ namespace LearnAPI.Controllers
 
 
 
+
+
         [NonAction]
         private string GetFilePath()
         {
@@ -164,7 +167,7 @@ namespace LearnAPI.Controllers
 
 
 
-        //[AllowAnonymous]
+        [AllowAnonymous]
         [HttpGet("generatepdf")]
 
         public async Task<IActionResult> generatepdf(string code)

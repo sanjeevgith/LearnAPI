@@ -16,6 +16,9 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Add Customer
     </button>
+    <button style="margin-left: 10px;" type="button" class="btn btn-success" (click)="downloadExcel()">
+      Export Customer
+    </button>
 </div>
 
 
@@ -122,15 +125,15 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">Code</th>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Creditlimit</th>
-        <th scope="col">Status Name</th>
-        <th scope="col">Taxcode</th>
-        <th scope="col">isActive</th>
-        <th scope="col">Actions</th>
+        <th class="thead" scope="col">Code</th>
+        <th class="thead" scope="col">Name</th>
+        <th class="thead" scope="col">Email</th>
+        <th class="thead" scope="col">Phone</th>
+        <th class="thead" scope="col">Creditlimit</th>
+        <th class="thead" scope="col">Status</th>
+        <th class="thead" scope="col">Taxcode</th>
+        <th class="thead" scope="col">isActive</th>
+        <th class="thead" scope="col">Actions</th>
       </tr>
     </thead>
     <tbody *ngFor="let data of getallres">
@@ -146,7 +149,7 @@
         </svg></td>
         <td>{{data.phone}}</td>
         <td>{{data.creditlimit}}</td>
-        <td>{{data.statusname}}</td>
+        <td  ><p [ngClass]="{'active-background': data.statusname=='Active', 'inactive-background': data.statusname==['In Active']}">{{data.statusname}}</p></td>
         <td>{{data.taxcode}}</td>
         <td>{{data.isActive}}</td>
         <td>
