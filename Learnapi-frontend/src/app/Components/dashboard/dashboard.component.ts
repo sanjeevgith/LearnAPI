@@ -72,9 +72,17 @@ export class DashboardComponent implements OnInit {
     this.dashboardservice.getall().subscribe((res) => {
       this.getallres = res;
       console.log(this.getallres);
-      console.log(this.getallres.length + 1 );
-      this.defaultcode = (this.getallres.length + 1).toString();
-      // this.defaultcode = this.getallres.length + 1 
+
+      let maxCode = Number.MIN_VALUE; 
+      for (let i = 0; i < this.getallres.length; i++) {
+          const code = parseInt(this.getallres[i].code, 10);
+      
+          if (!isNaN(code) && code > maxCode) {
+              maxCode = code; 
+          }
+      }
+      console.log(`Largest code in getallres is: ${maxCode+1}`);
+      this.defaultcode =(maxCode + 1).toString();
       // setTimeout(() => {
         this.spinnerService.hide();
       //}, 3000);
