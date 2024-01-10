@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.Extensions.Caching.Memory;
 using System.Data;
+using System.Text.Json;
 
 
 
@@ -23,27 +25,49 @@ namespace LearnAPI.Controllers
     {
         private readonly ICustomerService service;
         private readonly IWebHostEnvironment environment;
+        private readonly IMemoryCache memoryCache;
 
-        public CustomerController(ICustomerService service,IWebHostEnvironment environment)
+        public CustomerController(ICustomerService service,IWebHostEnvironment environment, IMemoryCache cache)
         {
             this.service = service;
             this.environment = environment;
+            this.memoryCache = cache;
         }
 
-       // [AllowAnonymous]
+        // [AllowAnonymous]
         [HttpGet("GetAll")]
         public async Task<IActionResult> Get()
         {
-            var data = await this.service.GetAll();
-            if (data == null)
+            var key = "getAll";
+            string cachedData;
+            bool isCached = this.memoryCache.TryGetValue(key, out cachedData);
+            if (!isCached)
             {
-                return NotFound();
+                var data = await this.service.GetAll();
+                Thread.Sleep(3000);
+                var options = new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpiration = DateTime.UtcNow.AddSeconds(20), //perticular time k bad expire ho jayega
+                    SlidingExpiration = TimeSpan.FromSeconds(30), // if 10 second tak koi request nahi mila to data erase ho jayega
+                };
+                var serializedData = JsonSerializer.Serialize(data); //list data directly store nai hota isliye jsonSerializer use kiya he
+                this.memoryCache.Set(key, serializedData, options);
+                if (data == null)
+                {
+                    return NotFound();
+                }
+                return Ok(data);
             }
-            return Ok(data);
+            else
+            {
+                var deserializedData = JsonSerializer.Deserialize<List<Customermodal>>(cachedData);
+                return Ok(deserializedData);
+            }
         }
 
 
-       // [AllowAnonymous]
+
+        // [AllowAnonymous]
         [HttpPost("GetAllWithPagination")]
         public async Task<IActionResult> GetPagi(PageinationReq pageinationReq)
         {
