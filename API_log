@@ -1,0 +1,1493 @@
+2024-08-01 14:57:01.997 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-01 14:57:02.122 +05:30 [DBG] Hosting starting
+2024-08-01 14:57:02.274 +05:30 [INF] User profile is available. Using 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-01 14:57:02.280 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-0223a282-517e-497f-9bec-edb484b731de.xml'.
+2024-08-01 14:57:02.299 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-3f608d29-30d5-41f0-bded-26ef44b9fc70.xml'.
+2024-08-01 14:57:02.312 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-c24e4d2c-04f4-4da9-84ea-5f8edfa52420.xml'.
+2024-08-01 14:57:02.328 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-f373d71d-2bc1-462c-a7e0-399bedbfe153.xml'.
+2024-08-01 14:57:02.344 +05:30 [DBG] Found key {0223a282-517e-497f-9bec-edb484b731de}.
+2024-08-01 14:57:02.348 +05:30 [DBG] Found key {3f608d29-30d5-41f0-bded-26ef44b9fc70}.
+2024-08-01 14:57:02.348 +05:30 [DBG] Found key {c24e4d2c-04f4-4da9-84ea-5f8edfa52420}.
+2024-08-01 14:57:02.348 +05:30 [DBG] Found key {f373d71d-2bc1-462c-a7e0-399bedbfe153}.
+2024-08-01 14:57:02.354 +05:30 [DBG] Considering key {3f608d29-30d5-41f0-bded-26ef44b9fc70} with expiration date 2024-08-12 10:37:52Z as default key.
+2024-08-01 14:57:02.356 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 14:57:02.358 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-08-01 14:57:02.359 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 14:57:02.361 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-08-01 14:57:02.362 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-08-01 14:57:02.364 +05:30 [DBG] Using key {3f608d29-30d5-41f0-bded-26ef44b9fc70} as the default key.
+2024-08-01 14:57:02.364 +05:30 [DBG] Key ring with default key {3f608d29-30d5-41f0-bded-26ef44b9fc70} was loaded during application startup.
+2024-08-01 14:57:02.992 +05:30 [INF] Now listening on: https://localhost:7213
+2024-08-01 14:57:02.995 +05:30 [INF] Now listening on: http://localhost:5265
+2024-08-01 14:57:02.995 +05:30 [DBG] Loaded hosting startup assembly LearnAPI
+2024-08-01 14:57:02.995 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-01 14:57:02.995 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-01 14:57:02.999 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-01 14:57:03.002 +05:30 [INF] Hosting environment: Development
+2024-08-01 14:57:03.004 +05:30 [INF] Content root path: D:\DotNet\LearnAPI\LearnAPI
+2024-08-01 14:57:03.004 +05:30 [DBG] Hosting started
+2024-08-01 14:57:03.149 +05:30 [DBG] Connection id "0HN5I1GD5S1F0" received FIN.
+2024-08-01 14:57:03.153 +05:30 [DBG] Connection id "0HN5I1GD5S1F0" accepted.
+2024-08-01 14:57:03.154 +05:30 [DBG] Connection id "0HN5I1GD5S1F0" started.
+2024-08-01 14:57:03.168 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-01 14:57:03.320 +05:30 [DBG] Connection id "0HN5I1GD5S1F0" stopped.
+2024-08-01 14:57:03.323 +05:30 [DBG] Connection id "0HN5I1GD5S1F0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-01 14:57:03.404 +05:30 [DBG] Connection id "0HN5I1GD5S1F1" accepted.
+2024-08-01 14:57:03.405 +05:30 [DBG] Connection id "0HN5I1GD5S1F1" started.
+2024-08-01 14:57:03.469 +05:30 [DBG] Connection 0HN5I1GD5S1F1 established using the following protocol: "Tls13"
+2024-08-01 14:57:03.638 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger - -
+2024-08-01 14:57:03.840 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-01 14:57:03.926 +05:30 [DBG] No candidates found for the request path '/swagger'
+2024-08-01 14:57:03.927 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:57:04.001 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger - - - 301 0 - 368.4808ms
+2024-08-01 14:57:04.009 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/index.html - -
+2024-08-01 14:57:04.014 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-01 14:57:04.014 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:57:04.094 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-01 14:57:04.095 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-01 14:57:04.114 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-01 14:57:04.115 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-01 14:57:04.115 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/index.html - - - 200 - text/html;charset=utf-8 105.7548ms
+2024-08-01 14:57:04.131 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/swagger-ui.css - -
+2024-08-01 14:57:04.131 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2024-08-01 14:57:04.131 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:57:04.133 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/swagger-ui-standalone-preset.js - -
+2024-08-01 14:57:04.133 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/swagger-ui-bundle.js - -
+2024-08-01 14:57:04.133 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2024-08-01 14:57:04.133 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - -
+2024-08-01 14:57:04.133 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:57:04.133 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2024-08-01 14:57:04.134 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:57:04.144 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - - - 200 13752 application/javascript;+charset=utf-8 11.3948ms
+2024-08-01 14:57:04.179 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-01 14:57:04.180 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/swagger-ui.css - - - 200 144929 text/css 48.8184ms
+2024-08-01 14:57:04.183 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_vs/browserLink - -
+2024-08-01 14:57:04.202 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-08-01 14:57:04.202 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 69.1485ms
+2024-08-01 14:57:04.270 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.2633ms
+2024-08-01 14:57:04.506 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-08-01 14:57:04.506 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 373.6781ms
+2024-08-01 14:57:04.798 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - -
+2024-08-01 14:57:04.798 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-01 14:57:04.798 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:57:04.857 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/favicon-32x32.png - -
+2024-08-01 14:57:04.857 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2024-08-01 14:57:04.857 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:57:04.857 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-08-01 14:57:04.857 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/favicon-32x32.png - - - 200 628 image/png 0.8088ms
+2024-08-01 14:57:05.054 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 256.1199ms
+2024-08-01 14:59:02.035 +05:30 [DBG] Config reload token fired. Checking for changes...
+2024-08-01 14:59:02.299 +05:30 [DBG] Config reload token fired. Checking for changes...
+2024-08-01 14:59:13.114 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-01 14:59:13.210 +05:30 [DBG] Hosting starting
+2024-08-01 14:59:13.249 +05:30 [INF] User profile is available. Using 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-01 14:59:13.257 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-0223a282-517e-497f-9bec-edb484b731de.xml'.
+2024-08-01 14:59:13.265 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-3f608d29-30d5-41f0-bded-26ef44b9fc70.xml'.
+2024-08-01 14:59:13.265 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-c24e4d2c-04f4-4da9-84ea-5f8edfa52420.xml'.
+2024-08-01 14:59:13.266 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-f373d71d-2bc1-462c-a7e0-399bedbfe153.xml'.
+2024-08-01 14:59:13.271 +05:30 [DBG] Found key {0223a282-517e-497f-9bec-edb484b731de}.
+2024-08-01 14:59:13.276 +05:30 [DBG] Found key {3f608d29-30d5-41f0-bded-26ef44b9fc70}.
+2024-08-01 14:59:13.276 +05:30 [DBG] Found key {c24e4d2c-04f4-4da9-84ea-5f8edfa52420}.
+2024-08-01 14:59:13.276 +05:30 [DBG] Found key {f373d71d-2bc1-462c-a7e0-399bedbfe153}.
+2024-08-01 14:59:13.291 +05:30 [DBG] Considering key {3f608d29-30d5-41f0-bded-26ef44b9fc70} with expiration date 2024-08-12 10:37:52Z as default key.
+2024-08-01 14:59:13.297 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 14:59:13.301 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-08-01 14:59:13.303 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 14:59:13.308 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-08-01 14:59:13.309 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-08-01 14:59:13.311 +05:30 [DBG] Using key {3f608d29-30d5-41f0-bded-26ef44b9fc70} as the default key.
+2024-08-01 14:59:13.311 +05:30 [DBG] Key ring with default key {3f608d29-30d5-41f0-bded-26ef44b9fc70} was loaded during application startup.
+2024-08-01 14:59:13.569 +05:30 [INF] Now listening on: https://localhost:7213
+2024-08-01 14:59:13.572 +05:30 [INF] Now listening on: http://localhost:5265
+2024-08-01 14:59:13.572 +05:30 [DBG] Loaded hosting startup assembly LearnAPI
+2024-08-01 14:59:13.572 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-01 14:59:13.572 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-01 14:59:13.577 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-01 14:59:13.579 +05:30 [INF] Hosting environment: Development
+2024-08-01 14:59:13.581 +05:30 [INF] Content root path: D:\DotNet\LearnAPI\LearnAPI
+2024-08-01 14:59:13.581 +05:30 [DBG] Hosting started
+2024-08-01 14:59:13.689 +05:30 [DBG] Connection id "0HN5I1HK2POB5" received FIN.
+2024-08-01 14:59:13.698 +05:30 [DBG] Connection id "0HN5I1HK2POB5" accepted.
+2024-08-01 14:59:13.700 +05:30 [DBG] Connection id "0HN5I1HK2POB5" started.
+2024-08-01 14:59:13.721 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-01 14:59:13.774 +05:30 [DBG] Connection id "0HN5I1HK2POB5" stopped.
+2024-08-01 14:59:13.778 +05:30 [DBG] Connection id "0HN5I1HK2POB5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-01 14:59:13.837 +05:30 [DBG] Connection id "0HN5I1HK2POB6" accepted.
+2024-08-01 14:59:13.837 +05:30 [DBG] Connection id "0HN5I1HK2POB6" started.
+2024-08-01 14:59:13.892 +05:30 [DBG] Connection 0HN5I1HK2POB6 established using the following protocol: "Tls13"
+2024-08-01 14:59:13.986 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/index.html - -
+2024-08-01 14:59:14.116 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-01 14:59:14.172 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-01 14:59:14.172 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:59:14.286 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-01 14:59:14.287 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-01 14:59:14.311 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-01 14:59:14.312 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-01 14:59:14.314 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/index.html - - - 200 - text/html;charset=utf-8 331.3686ms
+2024-08-01 14:59:14.340 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - -
+2024-08-01 14:59:14.347 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - - - 200 13752 application/javascript;+charset=utf-8 6.9711ms
+2024-08-01 14:59:14.366 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_vs/browserLink - -
+2024-08-01 14:59:14.427 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.0283ms
+2024-08-01 14:59:14.808 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - -
+2024-08-01 14:59:14.811 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-01 14:59:14.811 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 14:59:15.034 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 225.8930ms
+2024-08-01 14:59:28.102 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47
+2024-08-01 14:59:28.108 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authorize/GenerateToken'
+2024-08-01 14:59:28.111 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)' with route pattern 'api/Authorize/GenerateToken' is valid for the request path '/api/Authorize/GenerateToken'
+2024-08-01 14:59:28.111 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 14:59:28.113 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 14:59:28.113 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 14:59:28.115 +05:30 [DBG] The request has an origin header: 'https://localhost:7213'.
+2024-08-01 14:59:28.115 +05:30 [INF] CORS policy execution failed.
+2024-08-01 14:59:28.115 +05:30 [INF] Request origin https://localhost:7213 does not have permission to access the resource.
+2024-08-01 14:59:28.834 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-08-01 14:59:28.837 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 14:59:28.862 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-08-01 14:59:28.863 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 14:59:28.863 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 14:59:28.864 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 14:59:28.864 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 14:59:28.864 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 14:59:28.865 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 14:59:29.624 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-01 14:59:29.648 +05:30 [DBG] Executed controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 14:59:29.691 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 14:59:29.694 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' using the name '' in request data ...
+2024-08-01 14:59:29.695 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-01 14:59:29.700 +05:30 [DBG] Connection id "0HN5I1HK2POB6", Request id "0HN5I1HK2POB6:00000009": started reading request body.
+2024-08-01 14:59:29.701 +05:30 [DBG] Connection id "0HN5I1HK2POB6", Request id "0HN5I1HK2POB6:00000009": done reading request body.
+2024-08-01 14:59:29.703 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'LearnAPI.Modal.UserCred'
+2024-08-01 14:59:29.704 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 14:59:29.704 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 14:59:29.704 +05:30 [DBG] Attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 14:59:29.710 +05:30 [DBG] Done attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 14:59:30.402 +05:30 [DBG] Entity Framework Core 7.0.11 initialized 'LearndataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.11' with options: None
+2024-08-01 14:59:30.656 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblUser>()
+    .FirstOrDefault(item => item.Code == __userCred_username_0 && item.Password == __userCred_password_1)'
+2024-08-01 14:59:30.861 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<TblUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<TblUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblUser.Code (string) Required PK AfterSave:Throw MaxLength(50), 0], [Property: TblUser.Email (string) MaxLength(50), 1], [Property: TblUser.Isactive (string) MaxLength(50), 2], [Property: TblUser.Name (string) Required MaxLength(50), 3], [Property: TblUser.Password (string) MaxLength(50), 4], [Property: TblUser.Phone (string) MaxLength(50), 5], [Property: TblUser.Role (string) MaxLength(50), 6] }
+            SELECT TOP(1) t.code, t.email, t.isactive, t.name, t.password, t.phone, t.role
+            FROM tbl_user AS t
+            WHERE (t.code == @__userCred_username_0) && (t.password == @__userCred_password_1)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblUser>, 
+        LearnAPI.Repos.LearndataContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-01 14:59:30.914 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 14:59:30.915 +05:30 [DBG] Creating DbConnection.
+2024-08-01 14:59:30.941 +05:30 [DBG] Created DbConnection. (21ms).
+2024-08-01 14:59:30.950 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (36ms).
+2024-08-01 14:59:30.963 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (53ms).
+2024-08-01 14:59:30.966 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 14:59:31.796 +05:30 [ERR] An error occurred using the connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 14:59:31.826 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'LearnAPI.Repos.LearndataContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user ''.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:9df18418-a944-4aee-8291-3a76d58b4fde
+Error Number:18456,State:1,Class:14
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user ''.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:9df18418-a944-4aee-8291-3a76d58b4fde
+Error Number:18456,State:1,Class:14
+2024-08-01 14:59:31.934 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 3067.1006ms
+2024-08-01 14:59:31.935 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 14:59:31.967 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user ''.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at LearnAPI.Controllers.AuthorizeController.GenerateToken(UserCred userCred) in D:\DotNet\LearnAPI\LearnAPI\Controllers\AuthorizeController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:9df18418-a944-4aee-8291-3a76d58b4fde
+Error Number:18456,State:1,Class:14
+2024-08-01 14:59:31.982 +05:30 [DBG] 'LearndataContext' disposed.
+2024-08-01 14:59:31.989 +05:30 [DBG] Disposing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 14:59:31.996 +05:30 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-08-01 14:59:31.997 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47 - 500 - text/plain;+charset=utf-8 3894.9578ms
+2024-08-01 14:59:58.948 +05:30 [DBG] Config reload token fired. Checking for changes...
+2024-08-01 14:59:59.216 +05:30 [DBG] Config reload token fired. Checking for changes...
+2024-08-01 15:00:04.666 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-01 15:00:04.745 +05:30 [DBG] Hosting starting
+2024-08-01 15:00:04.781 +05:30 [INF] User profile is available. Using 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-01 15:00:04.788 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-0223a282-517e-497f-9bec-edb484b731de.xml'.
+2024-08-01 15:00:04.794 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-3f608d29-30d5-41f0-bded-26ef44b9fc70.xml'.
+2024-08-01 15:00:04.794 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-c24e4d2c-04f4-4da9-84ea-5f8edfa52420.xml'.
+2024-08-01 15:00:04.795 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-f373d71d-2bc1-462c-a7e0-399bedbfe153.xml'.
+2024-08-01 15:00:04.798 +05:30 [DBG] Found key {0223a282-517e-497f-9bec-edb484b731de}.
+2024-08-01 15:00:04.802 +05:30 [DBG] Found key {3f608d29-30d5-41f0-bded-26ef44b9fc70}.
+2024-08-01 15:00:04.802 +05:30 [DBG] Found key {c24e4d2c-04f4-4da9-84ea-5f8edfa52420}.
+2024-08-01 15:00:04.802 +05:30 [DBG] Found key {f373d71d-2bc1-462c-a7e0-399bedbfe153}.
+2024-08-01 15:00:04.808 +05:30 [DBG] Considering key {3f608d29-30d5-41f0-bded-26ef44b9fc70} with expiration date 2024-08-12 10:37:52Z as default key.
+2024-08-01 15:00:04.809 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 15:00:04.811 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-08-01 15:00:04.812 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 15:00:04.815 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-08-01 15:00:04.816 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-08-01 15:00:04.818 +05:30 [DBG] Using key {3f608d29-30d5-41f0-bded-26ef44b9fc70} as the default key.
+2024-08-01 15:00:04.819 +05:30 [DBG] Key ring with default key {3f608d29-30d5-41f0-bded-26ef44b9fc70} was loaded during application startup.
+2024-08-01 15:00:05.049 +05:30 [INF] Now listening on: https://localhost:7213
+2024-08-01 15:00:05.052 +05:30 [INF] Now listening on: http://localhost:5265
+2024-08-01 15:00:05.052 +05:30 [DBG] Loaded hosting startup assembly LearnAPI
+2024-08-01 15:00:05.052 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-01 15:00:05.053 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-01 15:00:05.057 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-01 15:00:05.059 +05:30 [INF] Hosting environment: Development
+2024-08-01 15:00:05.061 +05:30 [INF] Content root path: D:\DotNet\LearnAPI\LearnAPI
+2024-08-01 15:00:05.061 +05:30 [DBG] Hosting started
+2024-08-01 15:00:05.140 +05:30 [DBG] Connection id "0HN5I1I3DFBB1" accepted.
+2024-08-01 15:00:05.141 +05:30 [DBG] Connection id "0HN5I1I3DFBB1" started.
+2024-08-01 15:00:05.153 +05:30 [DBG] Connection id "0HN5I1I3DFBB2" received FIN.
+2024-08-01 15:00:05.153 +05:30 [DBG] Connection id "0HN5I1I3DFBB1" received FIN.
+2024-08-01 15:00:05.154 +05:30 [DBG] Connection id "0HN5I1I3DFBB2" accepted.
+2024-08-01 15:00:05.154 +05:30 [DBG] Connection id "0HN5I1I3DFBB2" started.
+2024-08-01 15:00:05.160 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-01 15:00:05.160 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-01 15:00:05.201 +05:30 [DBG] Connection id "0HN5I1I3DFBB2" stopped.
+2024-08-01 15:00:05.201 +05:30 [DBG] Connection id "0HN5I1I3DFBB1" stopped.
+2024-08-01 15:00:05.203 +05:30 [DBG] Connection id "0HN5I1I3DFBB1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-01 15:00:05.203 +05:30 [DBG] Connection id "0HN5I1I3DFBB2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-01 15:00:05.356 +05:30 [DBG] Connection id "0HN5I1I3DFBB3" accepted.
+2024-08-01 15:00:05.357 +05:30 [DBG] Connection id "0HN5I1I3DFBB3" started.
+2024-08-01 15:00:05.406 +05:30 [DBG] Connection 0HN5I1I3DFBB3 established using the following protocol: "Tls13"
+2024-08-01 15:00:05.478 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/index.html - -
+2024-08-01 15:00:05.586 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-01 15:00:05.646 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-01 15:00:05.647 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 15:00:05.767 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-01 15:00:05.768 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-01 15:00:05.788 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-01 15:00:05.788 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-01 15:00:05.791 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/index.html - - - 200 - text/html;charset=utf-8 315.1302ms
+2024-08-01 15:00:05.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - -
+2024-08-01 15:00:05.844 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - - - 200 13752 application/javascript;+charset=utf-8 8.2687ms
+2024-08-01 15:00:05.847 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_vs/browserLink - -
+2024-08-01 15:00:05.905 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.1261ms
+2024-08-01 15:00:06.075 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - -
+2024-08-01 15:00:06.078 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-01 15:00:06.079 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 15:00:06.253 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 178.2102ms
+2024-08-01 15:00:19.575 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47
+2024-08-01 15:00:19.580 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:00:19.583 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)' with route pattern 'api/Authorize/GenerateToken' is valid for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:00:19.583 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:00:19.585 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:00:19.585 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:00:19.586 +05:30 [DBG] The request has an origin header: 'https://localhost:7213'.
+2024-08-01 15:00:19.586 +05:30 [INF] CORS policy execution failed.
+2024-08-01 15:00:19.587 +05:30 [INF] Request origin https://localhost:7213 does not have permission to access the resource.
+2024-08-01 15:00:19.657 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-08-01 15:00:19.659 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:00:19.679 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-08-01 15:00:19.680 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:00:19.680 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:00:19.681 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:00:19.681 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:00:19.681 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:00:19.682 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:00:19.817 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-01 15:00:19.837 +05:30 [DBG] Executed controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:00:19.848 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:00:19.850 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' using the name '' in request data ...
+2024-08-01 15:00:19.851 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-01 15:00:19.857 +05:30 [DBG] Connection id "0HN5I1I3DFBB3", Request id "0HN5I1I3DFBB3:00000009": started reading request body.
+2024-08-01 15:00:19.857 +05:30 [DBG] Connection id "0HN5I1I3DFBB3", Request id "0HN5I1I3DFBB3:00000009": done reading request body.
+2024-08-01 15:00:19.860 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'LearnAPI.Modal.UserCred'
+2024-08-01 15:00:19.860 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:00:19.860 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:00:19.860 +05:30 [DBG] Attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:00:19.870 +05:30 [DBG] Done attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:00:20.420 +05:30 [DBG] Entity Framework Core 7.0.11 initialized 'LearndataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.11' with options: None
+2024-08-01 15:00:20.480 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblUser>()
+    .FirstOrDefault(item => item.Code == __userCred_username_0 && item.Password == __userCred_password_1)'
+2024-08-01 15:00:20.668 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<TblUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<TblUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblUser.Code (string) Required PK AfterSave:Throw MaxLength(50), 0], [Property: TblUser.Email (string) MaxLength(50), 1], [Property: TblUser.Isactive (string) MaxLength(50), 2], [Property: TblUser.Name (string) Required MaxLength(50), 3], [Property: TblUser.Password (string) MaxLength(50), 4], [Property: TblUser.Phone (string) MaxLength(50), 5], [Property: TblUser.Role (string) MaxLength(50), 6] }
+            SELECT TOP(1) t.code, t.email, t.isactive, t.name, t.password, t.phone, t.role
+            FROM tbl_user AS t
+            WHERE (t.code == @__userCred_username_0) && (t.password == @__userCred_password_1)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblUser>, 
+        LearnAPI.Repos.LearndataContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-01 15:00:20.733 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:00:20.735 +05:30 [DBG] Creating DbConnection.
+2024-08-01 15:00:20.754 +05:30 [DBG] Created DbConnection. (16ms).
+2024-08-01 15:00:20.765 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (28ms).
+2024-08-01 15:00:20.776 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (44ms).
+2024-08-01 15:00:20.780 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.078 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.091 +05:30 [DBG] Executing DbCommand [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:00:21.204 +05:30 [INF] Executed DbCommand (113ms) [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:00:21.246 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:00:21.271 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.279 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 69ms reading results.
+2024-08-01 15:00:21.283 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.290 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (6ms).
+2024-08-01 15:00:21.745 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblRefreshtoken>()
+    .FirstOrDefault(item => item.Userid == __username_0)'
+2024-08-01 15:00:21.749 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<TblRefreshtoken>(
+    asyncEnumerable: new SingleQueryingEnumerable<TblRefreshtoken>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblRefreshtoken.Userid (string) Required PK AfterSave:Throw MaxLength(50) Ansi, 0], [Property: TblRefreshtoken.Refreshtoken (string) Ansi, 1], [Property: TblRefreshtoken.Tokenid (string) MaxLength(50) Ansi, 2] }
+            SELECT TOP(1) t.userid, t.refreshtoken, t.tokenid
+            FROM tbl_refreshtoken AS t
+            WHERE t.userid == @__username_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblRefreshtoken>, 
+        LearnAPI.Repos.LearndataContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-01 15:00:21.750 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:00:21.750 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:00:21.750 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:00:21.751 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.751 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.752 +05:30 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:00:21.761 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:00:21.766 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblRefreshtoken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:00:21.772 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.772 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 10ms reading results.
+2024-08-01 15:00:21.772 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.772 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:00:21.775 +05:30 [DBG] SaveChanges starting for 'LearndataContext'.
+2024-08-01 15:00:21.778 +05:30 [DBG] DetectChanges starting for 'LearndataContext'.
+2024-08-01 15:00:21.790 +05:30 [DBG] The unchanged property 'TblRefreshtoken.Refreshtoken' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-08-01 15:00:21.799 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:00:21.800 +05:30 [DBG] DetectChanges completed for 'LearndataContext'.
+2024-08-01 15:00:21.859 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.859 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.863 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:00:21.863 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:00:21.863 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:00:21.863 +05:30 [DBG] Executing DbCommand [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:00:21.875 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:00:21.881 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.881 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 6ms reading results.
+2024-08-01 15:00:21.882 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.882 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:00:21.887 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:00:21.891 +05:30 [DBG] SaveChanges completed for 'LearndataContext' with 1 entities written to the database.
+2024-08-01 15:00:21.896 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-01 15:00:21.898 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-01 15:00:21.898 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-01 15:00:21.898 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-01 15:00:21.899 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-01 15:00:21.899 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-08-01 15:00:21.909 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 2222.1705ms
+2024-08-01 15:00:21.910 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:00:21.914 +05:30 [DBG] 'LearndataContext' disposed.
+2024-08-01 15:00:21.918 +05:30 [DBG] Disposing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:00:21.919 +05:30 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-08-01 15:00:21.920 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 2345.1105ms
+2024-08-01 15:00:49.271 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:00:49.280 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:00:49.280 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:00:49.280 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:00:49.280 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:00:49.280 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:00:49.283 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-08-01 15:00:49.291 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-01 15:00:49.295 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-01 15:00:49.296 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 401 0 - 24.6915ms
+2024-08-01 15:01:06.561 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:01:06.563 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:01:06.564 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:01:06.564 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:01:06.564 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:01:06.564 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:01:06.613 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:01:06.615 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:01:06.616 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:01:06.617 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:01:06.621 +05:30 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:01:06.621 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:01:06.621 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:01:06.621 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:01:06.621 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:01:06.621 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:01:06.621 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:01:06.623 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Get (LearnAPI) in 1.9353ms
+2024-08-01 15:01:06.624 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:01:06.637 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method118(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:01:06.640 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 500 - text/plain;+charset=utf-8 79.6032ms
+2024-08-01 15:01:30.579 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:01:30.579 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:01:30.579 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:01:30.579 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:01:30.579 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:01:30.579 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:01:30.580 +05:30 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2024-08-01 15:01:30.581 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-08-01 15:01:30.583 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-08-01 15:01:30.583 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 401 0 - 4.3882ms
+2024-08-01 15:01:51.041 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:01:51.042 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:01:51.042 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:01:51.042 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:01:51.042 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:01:51.042 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:01:51.043 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:01:51.043 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:01:51.043 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:01:51.043 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:01:51.043 +05:30 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:01:51.043 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:01:51.044 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:01:51.044 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:01:51.044 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:01:51.044 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:01:51.044 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:01:51.045 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Get (LearnAPI) in 1.1554ms
+2024-08-01 15:01:51.045 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:01:51.051 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method118(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:01:51.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 500 - text/plain;+charset=utf-8 11.4553ms
+2024-08-01 15:03:42.418 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:03:42.418 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:03:42.419 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:03:42.422 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:03:42.423 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:03:42.424 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:03:42.425 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:03:42.425 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:03:42.425 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:03:42.425 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:03:42.425 +05:30 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:03:42.425 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:03:42.426 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:03:42.426 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:03:42.426 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:03:42.426 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:03:42.426 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:03:42.429 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Get (LearnAPI) in 3.2127ms
+2024-08-01 15:03:42.429 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:03:42.436 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method118(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:03:42.437 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 500 - text/plain;+charset=utf-8 19.2104ms
+2024-08-01 15:04:33.925 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:04:33.925 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:04:33.926 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:04:33.926 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:04:33.926 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:04:33.926 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:04:33.930 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:04:33.931 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:04:33.932 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:04:33.932 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:04:33.932 +05:30 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:04:33.932 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:04:33.932 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:04:33.932 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:04:33.932 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:04:33.932 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:04:33.932 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:04:33.932 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Get (LearnAPI) in 0.6878ms
+2024-08-01 15:04:33.933 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:04:33.938 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method118(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:04:33.939 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 500 - text/plain;+charset=utf-8 14.2425ms
+2024-08-01 15:04:37.539 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47
+2024-08-01 15:04:37.540 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:04:37.540 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)' with route pattern 'api/Authorize/GenerateToken' is valid for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:04:37.540 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:04:37.540 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:04:37.540 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:04:37.541 +05:30 [DBG] The request has an origin header: 'https://localhost:7213'.
+2024-08-01 15:04:37.541 +05:30 [INF] CORS policy execution failed.
+2024-08-01 15:04:37.541 +05:30 [INF] Request origin https://localhost:7213 does not have permission to access the resource.
+2024-08-01 15:04:37.541 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:04:37.541 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:04:37.541 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:04:37.541 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-08-01 15:04:37.542 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:04:37.542 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:04:37.542 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:04:37.542 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:04:37.542 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:04:37.542 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:04:37.542 +05:30 [DBG] Executed controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:04:37.543 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:04:37.544 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' using the name '' in request data ...
+2024-08-01 15:04:37.544 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-01 15:04:37.544 +05:30 [DBG] Connection id "0HN5I1I3DFBB3", Request id "0HN5I1I3DFBB3:00000017": started reading request body.
+2024-08-01 15:04:37.544 +05:30 [DBG] Connection id "0HN5I1I3DFBB3", Request id "0HN5I1I3DFBB3:00000017": done reading request body.
+2024-08-01 15:04:37.544 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'LearnAPI.Modal.UserCred'
+2024-08-01 15:04:37.544 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:04:37.545 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:04:37.545 +05:30 [DBG] Attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:04:37.545 +05:30 [DBG] Done attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:04:37.560 +05:30 [DBG] Entity Framework Core 7.0.11 initialized 'LearndataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.11' with options: None
+2024-08-01 15:04:37.564 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:04:37.564 +05:30 [DBG] Creating DbConnection.
+2024-08-01 15:04:37.564 +05:30 [DBG] Created DbConnection. (0ms).
+2024-08-01 15:04:37.564 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:04:37.564 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:04:37.564 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.564 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.564 +05:30 [DBG] Executing DbCommand [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:04:37.569 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:04:37.570 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:04:37.570 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.570 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-01 15:04:37.570 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.570 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:04:37.571 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:04:37.571 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:04:37.571 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:04:37.571 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.571 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.571 +05:30 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:04:37.575 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:04:37.576 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblRefreshtoken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:04:37.576 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.576 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-01 15:04:37.576 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.576 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:04:37.576 +05:30 [DBG] SaveChanges starting for 'LearndataContext'.
+2024-08-01 15:04:37.576 +05:30 [DBG] DetectChanges starting for 'LearndataContext'.
+2024-08-01 15:04:37.576 +05:30 [DBG] The unchanged property 'TblRefreshtoken.Refreshtoken' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-08-01 15:04:37.576 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:04:37.576 +05:30 [DBG] DetectChanges completed for 'LearndataContext'.
+2024-08-01 15:04:37.578 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.578 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.578 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:04:37.578 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:04:37.578 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:04:37.578 +05:30 [DBG] Executing DbCommand [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:04:37.583 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:04:37.584 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.584 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-01 15:04:37.584 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.584 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:04:37.584 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:04:37.584 +05:30 [DBG] SaveChanges completed for 'LearndataContext' with 1 entities written to the database.
+2024-08-01 15:04:37.584 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-01 15:04:37.584 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-01 15:04:37.584 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-01 15:04:37.584 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-01 15:04:37.585 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-01 15:04:37.585 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-08-01 15:04:37.585 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 43.477ms
+2024-08-01 15:04:37.585 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:04:37.585 +05:30 [DBG] 'LearndataContext' disposed.
+2024-08-01 15:04:37.586 +05:30 [DBG] Disposing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:04:37.586 +05:30 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-01 15:04:37.586 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 47.1278ms
+2024-08-01 15:04:57.105 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:04:57.105 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:04:57.105 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:04:57.105 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:04:57.105 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:04:57.105 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:04:57.106 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:04:57.106 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:04:57.106 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:04:57.106 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:04:57.106 +05:30 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:04:57.106 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:04:57.106 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:04:57.106 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:04:57.106 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:04:57.106 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:04:57.106 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:04:57.114 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Get (LearnAPI) in 7.325ms
+2024-08-01 15:04:57.114 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:04:57.121 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method118(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:04:57.122 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 500 - text/plain;+charset=utf-8 17.0958ms
+2024-08-01 15:08:02.679 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetByCode?code=1 - -
+2024-08-01 15:08:02.680 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetByCode'
+2024-08-01 15:08:02.680 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)' with route pattern 'api/Customer/GetByCode' is valid for the request path '/api/Customer/GetByCode'
+2024-08-01 15:08:02.680 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:08:02.680 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:08:02.680 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:08:02.682 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:08:02.683 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:08:02.683 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:08:02.684 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:08:02.689 +05:30 [INF] Route matched with {action = "Getbycode", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Getbycode(System.String) on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:08:02.689 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:08:02.689 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:08:02.689 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:08:02.689 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:08:02.689 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:08:02.689 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:08:02.690 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI) in 0.9162ms
+2024-08-01 15:08:02.690 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:08:02.695 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method126(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:08:02.696 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetByCode?code=1 - - - 500 - text/plain;+charset=utf-8 17.9502ms
+2024-08-01 15:08:05.865 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetByCode?code=1 - -
+2024-08-01 15:08:05.865 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetByCode'
+2024-08-01 15:08:05.865 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)' with route pattern 'api/Customer/GetByCode' is valid for the request path '/api/Customer/GetByCode'
+2024-08-01 15:08:05.865 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:08:05.865 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:08:05.865 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:08:05.866 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:08:05.866 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:08:05.866 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:08:05.866 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:08:05.866 +05:30 [INF] Route matched with {action = "Getbycode", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Getbycode(System.String) on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:08:05.866 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:08:05.866 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:08:05.866 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:08:05.866 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:08:05.866 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:08:05.866 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:08:05.867 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI) in 0.8072ms
+2024-08-01 15:08:05.867 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:08:05.882 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method126(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:08:05.884 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetByCode?code=1 - - - 500 - text/plain;+charset=utf-8 18.7157ms
+2024-08-01 15:13:04.346 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-01 15:13:04.468 +05:30 [DBG] Hosting starting
+2024-08-01 15:13:04.503 +05:30 [INF] User profile is available. Using 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-01 15:13:04.512 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-0223a282-517e-497f-9bec-edb484b731de.xml'.
+2024-08-01 15:13:04.520 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-3f608d29-30d5-41f0-bded-26ef44b9fc70.xml'.
+2024-08-01 15:13:04.521 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-c24e4d2c-04f4-4da9-84ea-5f8edfa52420.xml'.
+2024-08-01 15:13:04.521 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-f373d71d-2bc1-462c-a7e0-399bedbfe153.xml'.
+2024-08-01 15:13:04.526 +05:30 [DBG] Found key {0223a282-517e-497f-9bec-edb484b731de}.
+2024-08-01 15:13:04.530 +05:30 [DBG] Found key {3f608d29-30d5-41f0-bded-26ef44b9fc70}.
+2024-08-01 15:13:04.531 +05:30 [DBG] Found key {c24e4d2c-04f4-4da9-84ea-5f8edfa52420}.
+2024-08-01 15:13:04.531 +05:30 [DBG] Found key {f373d71d-2bc1-462c-a7e0-399bedbfe153}.
+2024-08-01 15:13:04.538 +05:30 [DBG] Considering key {3f608d29-30d5-41f0-bded-26ef44b9fc70} with expiration date 2024-08-12 10:37:52Z as default key.
+2024-08-01 15:13:04.540 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 15:13:04.542 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-08-01 15:13:04.544 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 15:13:04.547 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-08-01 15:13:04.548 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-08-01 15:13:04.549 +05:30 [DBG] Using key {3f608d29-30d5-41f0-bded-26ef44b9fc70} as the default key.
+2024-08-01 15:13:04.549 +05:30 [DBG] Key ring with default key {3f608d29-30d5-41f0-bded-26ef44b9fc70} was loaded during application startup.
+2024-08-01 15:13:04.769 +05:30 [INF] Now listening on: https://localhost:7213
+2024-08-01 15:13:04.771 +05:30 [INF] Now listening on: http://localhost:5265
+2024-08-01 15:13:04.771 +05:30 [DBG] Loaded hosting startup assembly LearnAPI
+2024-08-01 15:13:04.771 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-01 15:13:04.771 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-01 15:13:04.776 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-01 15:13:04.779 +05:30 [INF] Hosting environment: Development
+2024-08-01 15:13:04.781 +05:30 [INF] Content root path: D:\DotNet\LearnAPI\LearnAPI
+2024-08-01 15:13:04.781 +05:30 [DBG] Hosting started
+2024-08-01 15:13:04.910 +05:30 [DBG] Connection id "0HN5I1PBPU6ER" received FIN.
+2024-08-01 15:13:04.916 +05:30 [DBG] Connection id "0HN5I1PBPU6ER" accepted.
+2024-08-01 15:13:04.917 +05:30 [DBG] Connection id "0HN5I1PBPU6ER" started.
+2024-08-01 15:13:04.943 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-01 15:13:04.998 +05:30 [DBG] Connection id "0HN5I1PBPU6ER" stopped.
+2024-08-01 15:13:05.003 +05:30 [DBG] Connection id "0HN5I1PBPU6ER" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-01 15:13:05.061 +05:30 [DBG] Connection id "0HN5I1PBPU6ES" accepted.
+2024-08-01 15:13:05.061 +05:30 [DBG] Connection id "0HN5I1PBPU6ES" started.
+2024-08-01 15:13:05.112 +05:30 [DBG] Connection 0HN5I1PBPU6ES established using the following protocol: "Tls13"
+2024-08-01 15:13:05.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/index.html - -
+2024-08-01 15:13:05.292 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-01 15:13:05.356 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-01 15:13:05.356 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 15:13:05.459 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-01 15:13:05.460 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-01 15:13:05.479 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-01 15:13:05.480 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-01 15:13:05.482 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/index.html - - - 200 - text/html;charset=utf-8 294.9525ms
+2024-08-01 15:13:05.519 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - -
+2024-08-01 15:13:05.526 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - - - 200 13752 application/javascript;+charset=utf-8 6.5365ms
+2024-08-01 15:13:05.527 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_vs/browserLink - -
+2024-08-01 15:13:05.579 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.4189ms
+2024-08-01 15:13:05.707 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - -
+2024-08-01 15:13:05.709 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-01 15:13:05.709 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 15:13:05.930 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 222.9181ms
+2024-08-01 15:13:12.685 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47
+2024-08-01 15:13:12.689 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:13:12.692 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)' with route pattern 'api/Authorize/GenerateToken' is valid for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:13:12.692 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:13:12.694 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:13:12.694 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:13:12.695 +05:30 [DBG] The request has an origin header: 'https://localhost:7213'.
+2024-08-01 15:13:12.696 +05:30 [INF] CORS policy execution failed.
+2024-08-01 15:13:12.696 +05:30 [INF] Request origin https://localhost:7213 does not have permission to access the resource.
+2024-08-01 15:13:13.316 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-08-01 15:13:13.331 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:13:13.360 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-08-01 15:13:13.362 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:13:13.363 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:13:13.363 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:13:13.363 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:13:13.363 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:13:13.365 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:13:13.854 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-01 15:13:13.878 +05:30 [DBG] Executed controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:13:13.890 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:13:13.892 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' using the name '' in request data ...
+2024-08-01 15:13:13.893 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-01 15:13:13.898 +05:30 [DBG] Connection id "0HN5I1PBPU6ES", Request id "0HN5I1PBPU6ES:00000009": started reading request body.
+2024-08-01 15:13:13.898 +05:30 [DBG] Connection id "0HN5I1PBPU6ES", Request id "0HN5I1PBPU6ES:00000009": done reading request body.
+2024-08-01 15:13:13.901 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'LearnAPI.Modal.UserCred'
+2024-08-01 15:13:13.902 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:13:13.902 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:13:13.902 +05:30 [DBG] Attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:13:13.910 +05:30 [DBG] Done attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:13:14.448 +05:30 [DBG] Entity Framework Core 7.0.11 initialized 'LearndataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.11' with options: None
+2024-08-01 15:13:14.694 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblUser>()
+    .FirstOrDefault(item => item.Code == __userCred_username_0 && item.Password == __userCred_password_1)'
+2024-08-01 15:13:14.848 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<TblUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<TblUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblUser.Code (string) Required PK AfterSave:Throw MaxLength(50), 0], [Property: TblUser.Email (string) MaxLength(50), 1], [Property: TblUser.Isactive (string) MaxLength(50), 2], [Property: TblUser.Name (string) Required MaxLength(50), 3], [Property: TblUser.Password (string) MaxLength(50), 4], [Property: TblUser.Phone (string) MaxLength(50), 5], [Property: TblUser.Role (string) MaxLength(50), 6] }
+            SELECT TOP(1) t.code, t.email, t.isactive, t.name, t.password, t.phone, t.role
+            FROM tbl_user AS t
+            WHERE (t.code == @__userCred_username_0) && (t.password == @__userCred_password_1)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblUser>, 
+        LearnAPI.Repos.LearndataContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-01 15:13:14.901 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:13:14.903 +05:30 [DBG] Creating DbConnection.
+2024-08-01 15:13:14.922 +05:30 [DBG] Created DbConnection. (16ms).
+2024-08-01 15:13:14.929 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (27ms).
+2024-08-01 15:13:14.938 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (39ms).
+2024-08-01 15:13:14.942 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:15.501 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:15.510 +05:30 [DBG] Executing DbCommand [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:13:15.632 +05:30 [INF] Executed DbCommand (115ms) [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:13:15.687 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:13:15.720 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:15.729 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 90ms reading results.
+2024-08-01 15:13:15.732 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:15.739 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (6ms).
+2024-08-01 15:13:16.117 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblRefreshtoken>()
+    .FirstOrDefault(item => item.Userid == __username_0)'
+2024-08-01 15:13:16.122 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<TblRefreshtoken>(
+    asyncEnumerable: new SingleQueryingEnumerable<TblRefreshtoken>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblRefreshtoken.Userid (string) Required PK AfterSave:Throw MaxLength(50) Ansi, 0], [Property: TblRefreshtoken.Refreshtoken (string) Ansi, 1], [Property: TblRefreshtoken.Tokenid (string) MaxLength(50) Ansi, 2] }
+            SELECT TOP(1) t.userid, t.refreshtoken, t.tokenid
+            FROM tbl_refreshtoken AS t
+            WHERE t.userid == @__username_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblRefreshtoken>, 
+        LearnAPI.Repos.LearndataContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-01 15:13:16.123 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:13:16.123 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:13:16.123 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:13:16.124 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.125 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.125 +05:30 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:13:16.132 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:13:16.138 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblRefreshtoken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:13:16.143 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.143 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 10ms reading results.
+2024-08-01 15:13:16.143 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.143 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:13:16.146 +05:30 [DBG] SaveChanges starting for 'LearndataContext'.
+2024-08-01 15:13:16.148 +05:30 [DBG] DetectChanges starting for 'LearndataContext'.
+2024-08-01 15:13:16.159 +05:30 [DBG] The unchanged property 'TblRefreshtoken.Refreshtoken' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-08-01 15:13:16.168 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:13:16.169 +05:30 [DBG] DetectChanges completed for 'LearndataContext'.
+2024-08-01 15:13:16.222 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.223 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.225 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:13:16.225 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:13:16.225 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:13:16.225 +05:30 [DBG] Executing DbCommand [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:13:16.230 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:13:16.238 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.238 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 7ms reading results.
+2024-08-01 15:13:16.239 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.239 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:13:16.243 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:13:16.245 +05:30 [DBG] SaveChanges completed for 'LearndataContext' with 1 entities written to the database.
+2024-08-01 15:13:16.249 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-01 15:13:16.251 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-01 15:13:16.251 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-01 15:13:16.251 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-01 15:13:16.252 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-01 15:13:16.253 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-08-01 15:13:16.259 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 2892.7896ms
+2024-08-01 15:13:16.260 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:13:16.262 +05:30 [DBG] 'LearndataContext' disposed.
+2024-08-01 15:13:16.265 +05:30 [DBG] Disposing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:13:16.266 +05:30 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-01 15:13:16.267 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 3581.8932ms
+2024-08-01 15:13:34.747 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:13:34.749 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:13:34.750 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:13:34.750 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:13:34.750 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:13:34.750 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:13:34.795 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:13:34.797 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:13:34.802 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:13:34.802 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:13:34.805 +05:30 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:13:34.806 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:13:34.806 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:13:34.806 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:13:34.806 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:13:34.806 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:13:34.806 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:13:34.807 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Get (LearnAPI) in 1.7029ms
+2024-08-01 15:13:34.808 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:13:34.821 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method118(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:13:34.825 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 500 - text/plain;+charset=utf-8 78.6531ms
+2024-08-01 15:15:15.859 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetByCode?code=1 - -
+2024-08-01 15:15:15.866 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetByCode'
+2024-08-01 15:15:15.867 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)' with route pattern 'api/Customer/GetByCode' is valid for the request path '/api/Customer/GetByCode'
+2024-08-01 15:15:15.867 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:15:15.867 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:15:15.867 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:15:15.869 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:15:15.869 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:15:15.871 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:15:15.871 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:15:15.875 +05:30 [INF] Route matched with {action = "Getbycode", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Getbycode(System.String) on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:15:15.875 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:15:15.875 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:15:15.875 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:15:15.875 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:15:15.875 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:15:15.875 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:15:15.876 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI) in 1.1725ms
+2024-08-01 15:15:15.877 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Getbycode (LearnAPI)'
+2024-08-01 15:15:15.883 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Caching.Memory.IMemoryCache' while attempting to activate 'LearnAPI.Controllers.CustomerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method126(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-01 15:15:15.884 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetByCode?code=1 - - - 500 - text/plain;+charset=utf-8 25.0920ms
+2024-08-01 15:17:34.839 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-01 15:17:34.929 +05:30 [DBG] Hosting starting
+2024-08-01 15:17:34.959 +05:30 [INF] User profile is available. Using 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-01 15:17:34.966 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-0223a282-517e-497f-9bec-edb484b731de.xml'.
+2024-08-01 15:17:34.972 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-3f608d29-30d5-41f0-bded-26ef44b9fc70.xml'.
+2024-08-01 15:17:34.972 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-c24e4d2c-04f4-4da9-84ea-5f8edfa52420.xml'.
+2024-08-01 15:17:34.972 +05:30 [DBG] Reading data from file 'C:\Users\Mon2\AppData\Local\ASP.NET\DataProtection-Keys\key-f373d71d-2bc1-462c-a7e0-399bedbfe153.xml'.
+2024-08-01 15:17:34.976 +05:30 [DBG] Found key {0223a282-517e-497f-9bec-edb484b731de}.
+2024-08-01 15:17:34.980 +05:30 [DBG] Found key {3f608d29-30d5-41f0-bded-26ef44b9fc70}.
+2024-08-01 15:17:34.980 +05:30 [DBG] Found key {c24e4d2c-04f4-4da9-84ea-5f8edfa52420}.
+2024-08-01 15:17:34.980 +05:30 [DBG] Found key {f373d71d-2bc1-462c-a7e0-399bedbfe153}.
+2024-08-01 15:17:34.986 +05:30 [DBG] Considering key {3f608d29-30d5-41f0-bded-26ef44b9fc70} with expiration date 2024-08-12 10:37:52Z as default key.
+2024-08-01 15:17:34.988 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 15:17:34.990 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-08-01 15:17:34.991 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-01 15:17:34.994 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-08-01 15:17:34.995 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-08-01 15:17:34.996 +05:30 [DBG] Using key {3f608d29-30d5-41f0-bded-26ef44b9fc70} as the default key.
+2024-08-01 15:17:34.997 +05:30 [DBG] Key ring with default key {3f608d29-30d5-41f0-bded-26ef44b9fc70} was loaded during application startup.
+2024-08-01 15:17:35.254 +05:30 [INF] Now listening on: https://localhost:7213
+2024-08-01 15:17:35.256 +05:30 [INF] Now listening on: http://localhost:5265
+2024-08-01 15:17:35.256 +05:30 [DBG] Loaded hosting startup assembly LearnAPI
+2024-08-01 15:17:35.257 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-01 15:17:35.257 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-01 15:17:35.261 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-01 15:17:35.263 +05:30 [INF] Hosting environment: Development
+2024-08-01 15:17:35.265 +05:30 [INF] Content root path: D:\DotNet\LearnAPI\LearnAPI
+2024-08-01 15:17:35.265 +05:30 [DBG] Hosting started
+2024-08-01 15:17:35.579 +05:30 [DBG] Connection id "0HN5I1RSF7V2N" received FIN.
+2024-08-01 15:17:35.584 +05:30 [DBG] Connection id "0HN5I1RSF7V2N" accepted.
+2024-08-01 15:17:35.585 +05:30 [DBG] Connection id "0HN5I1RSF7V2N" started.
+2024-08-01 15:17:35.598 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-01 15:17:35.643 +05:30 [DBG] Connection id "0HN5I1RSF7V2N" stopped.
+2024-08-01 15:17:35.646 +05:30 [DBG] Connection id "0HN5I1RSF7V2N" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-01 15:17:35.744 +05:30 [DBG] Connection id "0HN5I1RSF7V2O" accepted.
+2024-08-01 15:17:35.744 +05:30 [DBG] Connection id "0HN5I1RSF7V2O" started.
+2024-08-01 15:17:35.783 +05:30 [DBG] Connection 0HN5I1RSF7V2O established using the following protocol: "Tls13"
+2024-08-01 15:17:35.869 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/index.html - -
+2024-08-01 15:17:35.969 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-01 15:17:36.036 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-01 15:17:36.036 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 15:17:36.144 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-01 15:17:36.145 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-01 15:17:36.163 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-01 15:17:36.164 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-01 15:17:36.167 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/index.html - - - 200 - text/html;charset=utf-8 299.7356ms
+2024-08-01 15:17:36.204 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_vs/browserLink - -
+2024-08-01 15:17:36.210 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - -
+2024-08-01 15:17:36.226 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_framework/aspnetcore-browser-refresh.js - - - 200 13752 application/javascript;+charset=utf-8 15.7621ms
+2024-08-01 15:17:36.265 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.1788ms
+2024-08-01 15:17:36.406 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - -
+2024-08-01 15:17:36.409 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-01 15:17:36.409 +05:30 [DBG] Request did not match any endpoints
+2024-08-01 15:17:36.590 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 183.6499ms
+2024-08-01 15:17:49.660 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47
+2024-08-01 15:17:49.664 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:17:49.667 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)' with route pattern 'api/Authorize/GenerateToken' is valid for the request path '/api/Authorize/GenerateToken'
+2024-08-01 15:17:49.667 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:17:49.669 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:17:49.669 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:17:49.670 +05:30 [DBG] The request has an origin header: 'https://localhost:7213'.
+2024-08-01 15:17:49.671 +05:30 [INF] CORS policy execution failed.
+2024-08-01 15:17:49.671 +05:30 [INF] Request origin https://localhost:7213 does not have permission to access the resource.
+2024-08-01 15:17:49.739 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-08-01 15:17:49.741 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:17:49.766 +05:30 [INF] Route matched with {action = "GenerateToken", controller = "Authorize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateToken(LearnAPI.Modal.UserCred) on controller LearnAPI.Controllers.AuthorizeController (LearnAPI).
+2024-08-01 15:17:49.768 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:17:49.768 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:17:49.768 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:17:49.768 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:17:49.768 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:17:49.770 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:17:49.911 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-01 15:17:49.934 +05:30 [DBG] Executed controller factory for controller LearnAPI.Controllers.AuthorizeController (LearnAPI)
+2024-08-01 15:17:49.947 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:17:49.950 +05:30 [DBG] Attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred' using the name '' in request data ...
+2024-08-01 15:17:49.952 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-01 15:17:49.960 +05:30 [DBG] Connection id "0HN5I1RSF7V2O", Request id "0HN5I1RSF7V2O:00000009": started reading request body.
+2024-08-01 15:17:49.960 +05:30 [DBG] Connection id "0HN5I1RSF7V2O", Request id "0HN5I1RSF7V2O:00000009": done reading request body.
+2024-08-01 15:17:49.964 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'LearnAPI.Modal.UserCred'
+2024-08-01 15:17:49.965 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:17:49.965 +05:30 [DBG] Done attempting to bind parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:17:49.965 +05:30 [DBG] Attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred' ...
+2024-08-01 15:17:49.976 +05:30 [DBG] Done attempting to validate the bound parameter 'userCred' of type 'LearnAPI.Modal.UserCred'.
+2024-08-01 15:17:50.582 +05:30 [DBG] Entity Framework Core 7.0.11 initialized 'LearndataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.11' with options: None
+2024-08-01 15:17:50.644 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblUser>()
+    .FirstOrDefault(item => item.Code == __userCred_username_0 && item.Password == __userCred_password_1)'
+2024-08-01 15:17:50.813 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<TblUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<TblUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblUser.Code (string) Required PK AfterSave:Throw MaxLength(50), 0], [Property: TblUser.Email (string) MaxLength(50), 1], [Property: TblUser.Isactive (string) MaxLength(50), 2], [Property: TblUser.Name (string) Required MaxLength(50), 3], [Property: TblUser.Password (string) MaxLength(50), 4], [Property: TblUser.Phone (string) MaxLength(50), 5], [Property: TblUser.Role (string) MaxLength(50), 6] }
+            SELECT TOP(1) t.code, t.email, t.isactive, t.name, t.password, t.phone, t.role
+            FROM tbl_user AS t
+            WHERE (t.code == @__userCred_username_0) && (t.password == @__userCred_password_1)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblUser>, 
+        LearnAPI.Repos.LearndataContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-01 15:17:50.852 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:17:50.853 +05:30 [DBG] Creating DbConnection.
+2024-08-01 15:17:50.872 +05:30 [DBG] Created DbConnection. (15ms).
+2024-08-01 15:17:50.881 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (25ms).
+2024-08-01 15:17:50.893 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (41ms).
+2024-08-01 15:17:50.898 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.164 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.174 +05:30 [DBG] Executing DbCommand [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:17:51.240 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@__userCred_username_0='?' (Size = 50), @__userCred_password_1='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[code], [t].[email], [t].[isactive], [t].[name], [t].[password], [t].[phone], [t].[role]
+FROM [tbl_user] AS [t]
+WHERE [t].[code] = @__userCred_username_0 AND [t].[password] = @__userCred_password_1
+2024-08-01 15:17:51.277 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:17:51.298 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.304 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 59ms reading results.
+2024-08-01 15:17:51.308 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.315 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (6ms).
+2024-08-01 15:17:51.451 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblRefreshtoken>()
+    .FirstOrDefault(item => item.Userid == __username_0)'
+2024-08-01 15:17:51.456 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<TblRefreshtoken>(
+    asyncEnumerable: new SingleQueryingEnumerable<TblRefreshtoken>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblRefreshtoken.Userid (string) Required PK AfterSave:Throw MaxLength(50) Ansi, 0], [Property: TblRefreshtoken.Refreshtoken (string) Ansi, 1], [Property: TblRefreshtoken.Tokenid (string) MaxLength(50) Ansi, 2] }
+            SELECT TOP(1) t.userid, t.refreshtoken, t.tokenid
+            FROM tbl_refreshtoken AS t
+            WHERE t.userid == @__username_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblRefreshtoken>, 
+        LearnAPI.Repos.LearndataContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-01 15:17:51.457 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:17:51.457 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:17:51.458 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:17:51.458 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.459 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.459 +05:30 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:17:51.471 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 50) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[userid], [t].[refreshtoken], [t].[tokenid]
+FROM [tbl_refreshtoken] AS [t]
+WHERE [t].[userid] = @__username_0
+2024-08-01 15:17:51.476 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblRefreshtoken' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:17:51.480 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.480 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 9ms reading results.
+2024-08-01 15:17:51.480 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.480 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:17:51.483 +05:30 [DBG] SaveChanges starting for 'LearndataContext'.
+2024-08-01 15:17:51.486 +05:30 [DBG] DetectChanges starting for 'LearndataContext'.
+2024-08-01 15:17:51.501 +05:30 [DBG] The unchanged property 'TblRefreshtoken.Refreshtoken' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-08-01 15:17:51.508 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:17:51.509 +05:30 [DBG] DetectChanges completed for 'LearndataContext'.
+2024-08-01 15:17:51.559 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.559 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.563 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:17:51.563 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:17:51.563 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:17:51.563 +05:30 [DBG] Executing DbCommand [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:17:51.579 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (Size = 50) (DbType = AnsiString), @p0='?' (Size = 8000) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [tbl_refreshtoken] SET [refreshtoken] = @p0
+OUTPUT 1
+WHERE [userid] = @p1;
+2024-08-01 15:17:51.587 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.587 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 7ms reading results.
+2024-08-01 15:17:51.588 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.588 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:17:51.593 +05:30 [DBG] An entity of type 'TblRefreshtoken' tracked by 'LearndataContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:17:51.596 +05:30 [DBG] SaveChanges completed for 'LearndataContext' with 1 entities written to the database.
+2024-08-01 15:17:51.601 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-01 15:17:51.603 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-01 15:17:51.603 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-01 15:17:51.603 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-01 15:17:51.604 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-01 15:17:51.604 +05:30 [INF] Executing OkObjectResult, writing value of type 'LearnAPI.Modal.TokenResponse'.
+2024-08-01 15:17:51.613 +05:30 [INF] Executed action LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI) in 1840.7202ms
+2024-08-01 15:17:51.614 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.AuthorizeController.GenerateToken (LearnAPI)'
+2024-08-01 15:17:51.616 +05:30 [DBG] 'LearndataContext' disposed.
+2024-08-01 15:17:51.619 +05:30 [DBG] Disposing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:17:51.620 +05:30 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-08-01 15:17:51.621 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7213/api/Authorize/GenerateToken application/json 47 - 200 - application/json;+charset=utf-8 1961.7670ms
+2024-08-01 15:18:09.303 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7213/api/Customer/GetAll - -
+2024-08-01 15:18:09.305 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Customer/GetAll'
+2024-08-01 15:18:09.305 +05:30 [DBG] Endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)' with route pattern 'api/Customer/GetAll' is valid for the request path '/api/Customer/GetAll'
+2024-08-01 15:18:09.305 +05:30 [DBG] Request matched endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:18:09.305 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:18:09.305 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-01 15:18:09.349 +05:30 [DBG] Successfully validated the token.
+2024-08-01 15:18:09.351 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-08-01 15:18:09.356 +05:30 [DBG] Authorization was successful.
+2024-08-01 15:18:09.357 +05:30 [INF] Executing endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:18:09.360 +05:30 [INF] Route matched with {action = "Get", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller LearnAPI.Controllers.CustomerController (LearnAPI).
+2024-08-01 15:18:09.361 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-01 15:18:09.361 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-01 15:18:09.361 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-08-01 15:18:09.361 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-01 15:18:09.361 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-08-01 15:18:09.361 +05:30 [DBG] Executing controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:18:09.363 +05:30 [DBG] Executed controller factory for controller LearnAPI.Controllers.CustomerController (LearnAPI)
+2024-08-01 15:18:09.382 +05:30 [DBG] Entity Framework Core 7.0.11 initialized 'LearndataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.11' with options: None
+2024-08-01 15:18:09.383 +05:30 [DBG] Compiling query expression: 
+'DbSet<TblCustomer>()'
+2024-08-01 15:18:09.388 +05:30 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<TblCustomer>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: TblCustomer.Code (string) Required PK AfterSave:Throw MaxLength(50) Ansi, 0], [Property: TblCustomer.Creditlimit (decimal?), 1], [Property: TblCustomer.Email (string) MaxLength(50) Ansi, 2], [Property: TblCustomer.IsActive (bool?), 3], [Property: TblCustomer.Name (string) Required MaxLength(50) Ansi, 4], [Property: TblCustomer.Phone (string) MaxLength(50) Ansi, 5], [Property: TblCustomer.Taxcode (int?), 6] }
+        SELECT t.Code, t.Creditlimit, t.Email, t.IsActive, t.Name, t.Phone, t.Taxcode
+        FROM tbl_customer AS t), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, TblCustomer>, 
+    LearnAPI.Repos.LearndataContext, 
+    False, 
+    False, 
+    True
+)'
+2024-08-01 15:18:09.389 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-01 15:18:09.389 +05:30 [DBG] Creating DbConnection.
+2024-08-01 15:18:09.390 +05:30 [DBG] Created DbConnection. (0ms).
+2024-08-01 15:18:09.390 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:18:09.390 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2024-08-01 15:18:09.390 +05:30 [DBG] Opening connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:18:09.390 +05:30 [DBG] Opened connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:18:09.390 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Code], [t].[Creditlimit], [t].[Email], [t].[IsActive], [t].[Name], [t].[Phone], [t].[Taxcode]
+FROM [tbl_customer] AS [t]
+2024-08-01 15:18:09.395 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Code], [t].[Creditlimit], [t].[Email], [t].[IsActive], [t].[Name], [t].[Phone], [t].[Taxcode]
+FROM [tbl_customer] AS [t]
+2024-08-01 15:18:09.403 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.422 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.422 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.422 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.422 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Context 'LearndataContext' started tracking 'TblCustomer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-01 15:18:09.423 +05:30 [DBG] Closing data reader to 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:18:09.423 +05:30 [DBG] A data reader for 'learnapi' on server 'MSI-GF63\SQLEXPRESS' is being disposed after spending 27ms reading results.
+2024-08-01 15:18:09.423 +05:30 [DBG] Closing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:18:09.423 +05:30 [DBG] Closed connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS' (0ms).
+2024-08-01 15:18:12.480 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-01 15:18:12.480 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-08-01 15:18:12.480 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-01 15:18:12.480 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-01 15:18:12.480 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-01 15:18:12.480 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LearnAPI.Modal.Customermodal, LearnAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-01 15:18:12.482 +05:30 [INF] Executed action LearnAPI.Controllers.CustomerController.Get (LearnAPI) in 3121.587ms
+2024-08-01 15:18:12.483 +05:30 [INF] Executed endpoint 'LearnAPI.Controllers.CustomerController.Get (LearnAPI)'
+2024-08-01 15:18:12.483 +05:30 [DBG] 'LearndataContext' disposed.
+2024-08-01 15:18:12.483 +05:30 [DBG] Disposing connection to database 'learnapi' on server 'MSI-GF63\SQLEXPRESS'.
+2024-08-01 15:18:12.483 +05:30 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-08-01 15:18:12.483 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7213/api/Customer/GetAll - - - 200 - application/json;+charset=utf-8 3180.4869ms

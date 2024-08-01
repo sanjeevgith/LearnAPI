@@ -22,6 +22,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();
 
+//for cache
+builder.Services.AddMemoryCache();
+//end cache
+
 builder.Services.AddSwaggerGen(c =>
 {
 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
