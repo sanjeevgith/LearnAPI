@@ -34,7 +34,7 @@ c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         Name = "Authorization",
         Type = SecuritySchemeType.Http,
         BearerFormat = "JWT",
-        Scheme = "bearer"
+        Scheme = "bearer"r Both 
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement{
          {
