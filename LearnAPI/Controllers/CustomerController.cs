@@ -125,7 +125,7 @@ namespace LearnAPI.Controllers
         }
 
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpGet("ExportExcel")]
         public async Task<IActionResult> ExportExcel()
         {

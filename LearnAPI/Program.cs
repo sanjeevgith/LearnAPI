@@ -24,7 +24,6 @@ builder.Services.AddEndpointsApiExplorer();
 
 //for cache
 builder.Services.AddMemoryCache();
-//end cache
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -34,7 +33,7 @@ c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         Name = "Authorization",
         Type = SecuritySchemeType.Http,
         BearerFormat = "JWT",
-        Scheme = "bearer"r Both 
+        Scheme = "bearer"
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement{
          {
@@ -104,18 +103,19 @@ IMapper mapper = automapper.CreateMapper();
 builder.Services.AddSingleton(mapper);
 //end handler service
 
-  
-/*builder.Services.AddCors(p => p.AddPolicy("corspolicy",build =>
-{
-    build.WithOrigins("http://localhost:4200").AllowAnyOrigin().AllowAnyMethod();
-}));*/
+
+//builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
+//{
+//    build.WithOrigins("http://localhost:4200").AllowAnyOrigin().AllowAnyMethod();
+//}));
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("corspolicy", builder =>
+    options.AddPolicy("corspolicy", policy =>
     {
-        builder.WithOrigins("http://localhost:4200")
-               .AllowAnyMethod()
-               .AllowAnyHeader();
+        policy.WithOrigins("http://localhost:4200")  // Angular app URL
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials(); // Optional, if you need credentials like cookies
     });
 });
 

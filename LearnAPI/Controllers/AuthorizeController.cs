@@ -53,7 +53,8 @@ namespace LearnAPI.Controllers
                         new Claim(ClaimTypes.Name,user.Code),
                         new Claim(ClaimTypes.Role,user.Role)
                     }),
-                    Expires = DateTime.UtcNow.AddMinutes(100),
+                    //Expires = DateTime.UtcNow.AddMinutes(10),
+                    Expires = DateTime.UtcNow.AddSeconds(30),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenkey),SecurityAlgorithms.HmacSha256)
                 };
                 var token = tokenhandler.CreateToken(tokendesc);
@@ -125,7 +126,7 @@ namespace LearnAPI.Controllers
                     {
                         var _newtoken = new JwtSecurityToken(
                             claims: pricipal.Claims.ToArray(),
-                            expires: DateTime.Now.AddSeconds(50),
+                            expires: DateTime.Now.AddMinutes(5),
                             signingCredentials: new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this.jwtSettings.securitykey)),
                             SecurityAlgorithms.HmacSha256)
                             );
